@@ -1,0 +1,112 @@
+---
+title: "Home"
+pagetitle: "Cedric Martin | Business Analytics Portfolio"
+description: "Portfolio of Cedric Martin, a Business Analytics student focused on finance, data, and practical analytical systems."
+page-layout: full
+title-block-banner: false
+---
+
+::: {.hero}
+::: {.hero-content}
+<p class="eyebrow">Business Analytics · Finance · Data</p>
+
+# Cedric Martin
+
+I build analytical tools and data workflows that turn business information into clear, useful inputs for decision-making.
+
+::: {.hero-actions}
+[View Projects](projects.qmd){.button .button-primary}
+[About Me](about.qmd){.button .button-secondary}
+[Resume](resume.qmd){.button .button-text}
+:::
+:::
+
+::: {.hero-panel}
+<p class="panel-label">Areas of focus</p>
+
+- Business and data analytics
+- Financial analysis and FP&A
+- Data pipelines and automation
+- Decision-ready reporting
+:::
+:::
+
+::: {.content-section}
+::: {.section-intro}
+<p class="eyebrow">Selected work</p>
+
+## Featured project
+
+A closer look at how I approach real business data, from raw inputs to analysis-ready outputs.
+:::
+
+::: {.project-grid .project-grid-featured}
+::: {.project-card .project-card-featured}
+::: {.project-card-body}
+<p class="project-type">Data pipeline · Business analytics</p>
+
+### Core 4x4 Analytics Pipeline
+
+A practical sales-data workflow that brings together multiple source formats, standardizes records, resolves product mappings and duplicates, and prepares reliable data for downstream analysis in Power BI.
+
+::: {.tag-list}
+<span>Python</span><span>Pandas</span><span>Power BI</span><span>Data Quality</span><span>Git</span>
+:::
+
+[Read the case study <span aria-hidden="true">→</span>](projects/core4x4.qmd){.card-link}
+:::
+:::
+:::
+:::
+
+::: {.content-section .focus-section}
+::: {.section-intro}
+<p class="eyebrow">Capabilities</p>
+
+## What I work with
+
+My interests sit where analytical thinking, financial context, and useful business systems meet.
+:::
+
+::: {.focus-grid}
+::: {.focus-card}
+### Business Analytics
+Framing business questions, defining useful outputs, and communicating findings clearly.
+:::
+
+::: {.focus-card}
+### Python & SQL
+Transforming, validating, and querying data with repeatable workflows.
+:::
+
+::: {.focus-card}
+### Power BI
+Preparing structured data for reporting, exploration, and decision support.
+:::
+
+::: {.focus-card}
+### Financial Analysis
+Applying analytical thinking to planning, performance, and FP&A-oriented questions.
+:::
+
+::: {.focus-card}
+### Data Pipelines
+Organizing multi-source inputs into consistent, analysis-ready datasets.
+:::
+
+::: {.focus-card}
+### Automation
+Reducing repetitive work through maintainable tools and business processes.
+:::
+:::
+:::
+
+::: {.closing-cta}
+## Interested in how I think and build?
+
+Explore the project case study or learn more about the perspective I bring to analytics work.
+
+[Explore Projects](projects.qmd){.button .button-primary}
+[Learn About Me](about.qmd){.button .button-secondary}
+:::
+

@@ -1,0 +1,53 @@
+---
+title: "Projects"
+pagetitle: "Projects | Cedric Martin"
+description: "Business analytics, finance, and data projects by Cedric Martin."
+page-layout: full
+title-block-banner: false
+---
+
+::: {.page-hero}
+<p class="eyebrow">Portfolio</p>
+
+# Projects
+
+Selected work focused on turning complex business data into structured, useful analytical systems.
+:::
+
+::: {.content-section}
+::: {.project-grid}
+::: {.project-card}
+::: {.project-card-body}
+<p class="project-type">Data pipeline · Business analytics</p>
+
+## Core 4x4 Analytics Pipeline
+
+A sales-data processing workflow for consolidating multiple source formats, standardizing records, mapping products and SKUs, handling duplicates, validating outputs, and preparing data for Power BI.
+
+::: {.tag-list}
+<span>Python</span><span>Pandas</span><span>Power BI</span><span>Data Pipelines</span><span>Git</span>
+:::
+
+[View project <span aria-hidden="true">→</span>](projects/core4x4.qmd){.card-link}
+:::
+:::
+
+::: {.project-card .project-card-placeholder}
+::: {.project-card-body}
+<p class="project-type">More work to come</p>
+
+## Future projects
+
+This portfolio is designed to grow. Additional analytics, finance, automation, and business-systems work will be added here.
+:::
+:::
+:::
+:::
+
+::: {.closing-cta .closing-cta-compact}
+## Looking for the person behind the work?
+
+[About Me](about.qmd){.button .button-secondary}
+[View Resume](resume.qmd){.button .button-primary}
+:::
+

@@ -1,0 +1,58 @@
+---
+title: "About"
+pagetitle: "About | Cedric Martin"
+description: "About Cedric Martin and his approach to business analytics, finance, software, and business systems."
+page-layout: full
+title-block-banner: false
+---
+
+::: {.page-hero}
+<p class="eyebrow">About me</p>
+
+# Curious about the business. Careful with the data.
+
+I’m Cedric Martin, a Business Analytics student interested in the intersection of analytics, finance, software, and business systems.
+:::
+
+::: {.narrow-section}
+## How I approach analytics
+
+I’m drawn to work that begins with a practical business question and ends with something people can actually use: a clean dataset, a repeatable workflow, a clear report, or a better way to make a decision.
+
+My approach combines business context with hands-on technical work. I enjoy understanding how information moves through an organization, finding where inconsistency or manual effort gets in the way, and building structured solutions with tools such as Python, SQL, and Power BI.
+
+Finance and FP&A are especially interesting to me because they connect detailed analysis to planning and performance. More broadly, I’m motivated by roles where analytical thinking can improve how a business operates.
+
+::: {.principles-grid}
+::: {.principle}
+<span class="principle-number">01</span>
+
+### Start with the decision
+Good analysis is shaped by the question it needs to answer.
+:::
+
+::: {.principle}
+<span class="principle-number">02</span>
+
+### Build for reliability
+Clear structure, validation, and documentation make analytical work more useful.
+:::
+
+::: {.principle}
+<span class="principle-number">03</span>
+
+### Communicate clearly
+The value of analysis depends on whether others can understand and act on it.
+:::
+:::
+:::
+
+::: {.closing-cta}
+## See my work
+
+Read the Core 4x4 case study to see how these ideas show up in a real analytics project.
+
+[View Projects](projects.qmd){.button .button-primary}
+[Resume](resume.qmd){.button .button-secondary}
+:::
+

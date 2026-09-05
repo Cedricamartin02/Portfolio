@@ -1,0 +1,38 @@
+---
+title: "Resume"
+pagetitle: "Resume | Cedric Martin"
+description: "Resume and professional background for Cedric Martin."
+page-layout: full
+title-block-banner: false
+---
+
+::: {.page-hero}
+<p class="eyebrow">Experience & skills</p>
+
+# Resume
+
+A concise overview of my education, experience, technical skills, and analytics work.
+:::
+
+::: {.narrow-section}
+::: {.resume-panel}
+::: {.resume-icon aria-hidden="true"}
+<span>PDF</span>
+:::
+
+::: {.resume-copy}
+## Resume PDF coming soon
+
+The downloadable resume will be added here once the final PDF is ready. This placeholder intentionally does not link to a sample or fabricated document.
+
+**To publish it later:** add the file as `assets/Cedric-Martin-Resume.pdf`, then replace this note with a view/download button.
+:::
+:::
+
+::: {.callout-note}
+### In the meantime
+
+The [Projects](projects.qmd) page provides a detailed example of my work, and the [About](about.qmd) page summarizes my interests and approach.
+:::
+:::
+

@@ -1,0 +1,178 @@
+---
+title: "Core 4x4 Analytics Pipeline"
+pagetitle: "Core 4x4 Analytics Pipeline | Cedric Martin"
+description: "A business analytics case study covering a multi-source sales-data pipeline built with Python, Pandas, and Power BI."
+page-layout: full
+title-block-banner: false
+---
+
+:::: {.case-hero}
+<p class="eyebrow">Case study · Business analytics</p>
+
+# Core 4x4 Analytics Pipeline
+
+A structured workflow for turning multi-source sales records into consistent, validated data ready for downstream analysis.
+
+::: {.case-meta}
+::: {.meta-item}
+<span>Focus</span>
+Data preparation & quality
+:::
+::: {.meta-item}
+<span>Tools</span>
+Python, Pandas, Power BI
+:::
+::: {.meta-item}
+<span>Context</span>
+Real business sales data
+:::
+:::
+::::
+
+::::: {.case-study}
+:::: {.case-sidebar}
+<p class="sidebar-label">On this page</p>
+
+- [Summary](#project-summary)
+- [Business problem](#business-problem)
+- [My role](#my-role)
+- [Solution](#solution)
+- [Workflow](#data-workflow)
+- [Challenges](#key-challenges)
+- [Business value](#business-value)
+- [Learnings](#what-i-learned)
+::::
+
+:::: {.case-content}
+## Project summary
+
+Core 4x4 is a real-world business analytics project centered on sales data arriving from multiple platforms and in different source formats. The project establishes a repeatable path from raw records to standardized, analysis-ready data for use in Power BI.
+
+The emphasis is not only on processing files, but on creating confidence in the resulting dataset through product and SKU mapping, duplicate handling, and validation.
+
+## Business problem
+
+Sales information from separate platforms can differ in structure, naming conventions, product identifiers, and record quality. Without a consistent preparation process, those differences make it harder to combine records and use them reliably in reporting.
+
+The project addresses the need for a shared analytical foundation: one that preserves the useful information in each source while applying common business rules before analysis.
+
+## My role
+
+I worked across the data-preparation workflow, including reviewing source structures, shaping transformation logic in Python and Pandas, standardizing fields, supporting product and SKU mapping, handling duplicate records, and preparing the output for downstream Power BI work.
+
+I also used Git and GitHub to manage and track the project code. Specific organizational details and proprietary data are intentionally omitted.
+
+## Solution
+
+The solution organizes the preparation work into distinct stages. Source-specific differences are addressed early, then records move through shared standardization, mapping, duplicate handling, and validation steps. The resulting dataset is structured for analysis and reporting rather than treated as a collection of unrelated exports.
+
+::: {.solution-callout}
+### Design principle
+
+Separate source-specific cleanup from shared business rules. This makes the workflow easier to reason about and extend when a source changes or a new one is introduced.
+:::
+
+## Data workflow {#data-workflow}
+
+:::: {.pipeline aria-label="Core 4x4 data pipeline"}
+::: {.pipeline-step}
+<span class="step-number">01</span>
+<strong>Source files</strong>
+<small>Multiple platforms and formats</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">02</span>
+<strong>Ingest & standardize</strong>
+<small>Align fields, formats, and data types</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">03</span>
+<strong>Map & reconcile</strong>
+<small>Apply product and SKU mapping</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">04</span>
+<strong>Deduplicate</strong>
+<small>Identify and handle repeated records</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">05</span>
+<strong>Validate & deliver</strong>
+<small>Prepare output for Power BI</small>
+:::
+::::
+
+## Key challenges
+
+:::: {.challenge-grid}
+::: {.challenge-card}
+### Inconsistent source formats
+Each source can represent similar business information differently. The workflow needs to preserve meaning while creating a consistent structure.
+:::
+
+::: {.challenge-card}
+### Product identity
+Product names and SKUs may not align cleanly across inputs. Mapping creates a common reference for downstream analysis.
+:::
+
+::: {.challenge-card}
+### Duplicate records
+Potential duplicates require explicit handling so that combined files do not quietly distort later reporting.
+:::
+
+::: {.challenge-card}
+### Data validation
+Transformations need checks that surface unexpected values or structural issues before the data reaches Power BI.
+:::
+::::
+
+## Key features
+
+- Processing logic built in Python with Pandas
+- Support for sales data arriving in multiple source formats
+- Consistent field and record standardization
+- Product and SKU mapping as part of the preparation workflow
+- Explicit duplicate handling and validation steps
+- Analysis-ready output intended for downstream Power BI use
+- Version control with Git and GitHub
+
+## Technologies
+
+::: {.tag-list .tag-list-large}
+<span>Python</span><span>Pandas</span><span>Power BI</span><span>Git</span><span>GitHub</span><span>Data Validation</span><span>ETL Concepts</span>
+:::
+
+## Business value
+
+The pipeline provides a more consistent foundation for sales analysis by making source differences, mapping rules, duplicate handling, and validation part of a repeatable process. This supports clearer downstream reporting and makes the data-preparation logic easier to inspect and maintain.
+
+No quantitative performance or financial claims are included because those outcomes have not been established for publication.
+
+## What I learned
+
+This project reinforced that dependable analytics begins before a dashboard is built. Source context, naming conventions, product identity, and validation rules all shape whether an analytical output can be trusted.
+
+It also highlighted the importance of designing workflows in stages. A modular process makes it easier to isolate issues, revise business rules, and communicate how raw information becomes a reporting dataset.
+
+## Future improvements
+
+Potential next steps will be evaluated as the project develops. Areas worth exploring include expanded automated data-quality checks, clearer exception reporting, additional documentation for business rules, and a more formal refresh process for downstream reporting.
+
+::: {.case-footer-nav}
+[← All Projects](../projects.qmd){.button .button-secondary}
+[About Me](../about.qmd){.button .button-primary}
+:::
+::::
+:::::
