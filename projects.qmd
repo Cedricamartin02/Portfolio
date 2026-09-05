@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 pagetitle: "Projects | Cedric Martin"
-description: "Business analytics, finance, and data projects by Cedric Martin."
+description: "Business analytics, data engineering, automation, and software projects by Cedric Martin."
 page-layout: full
 title-block-banner: false
 ---
@@ -11,36 +11,102 @@ title-block-banner: false
 
 # Projects
 
-Selected work focused on turning complex business data into structured, useful analytical systems.
+Selected work spanning business analytics, data engineering, automation, and application development. Each summary is based on the corresponding repository and its source documentation.
 :::
 
 ::: {.content-section}
-::: {.project-grid}
-::: {.project-card}
+:::: {.project-grid}
+::: {.project-card .project-card-featured}
 ::: {.project-card-body}
-<p class="project-type">Data pipeline · Business analytics</p>
+::: {.project-card-heading}
+<p class="project-type">Business analytics · Data engineering</p>
+<span class="repository-status status-private">Private repository</span>
+:::
 
 ## Core 4x4 Analytics Pipeline
 
-A sales-data processing workflow for consolidating multiple source formats, standardizing records, mapping products and SKUs, handling duplicates, validating outputs, and preparing data for Power BI.
+A local Windows data application that converts marketplace and internal CSV exports into a standardized, traceable event ledger. The workflow supports validation reporting, approved SKU mapping, duplicate handling, optional SQL Server loading, and Power BI analytics views.
 
 ::: {.tag-list}
-<span>Python</span><span>Pandas</span><span>Power BI</span><span>Data Pipelines</span><span>Git</span>
+<span>Python</span><span>Flask</span><span>SQL Server</span><span>Power BI</span><span>Data Validation</span>
 :::
 
-[View project <span aria-hidden="true">→</span>](projects/core4x4.qmd){.card-link}
+::: {.project-links}
+[View case study <span aria-hidden="true">→</span>](projects/core4x4.qmd){.card-link}
+:::
 :::
 :::
 
-::: {.project-card .project-card-placeholder}
+::: {.project-card}
 ::: {.project-card-body}
-<p class="project-type">More work to come</p>
+::: {.project-card-heading}
+<p class="project-type">Application development · Analytics</p>
+<span class="repository-status status-public">Public repository</span>
+:::
 
-## Future projects
+## CedHealth
 
-This portfolio is designed to grow. Additional analytics, finance, automation, and business-systems work will be added here.
+A Flask-based health application for managing accounts, goals, meals, workouts, weight entries, favorites, and nutrition-oriented analysis. It uses SQLite persistence, Jinja templates, and progressive-web-app support.
+
+::: {.tag-list}
+<span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span><span>PWA</span>
+:::
+
+::: {.project-links}
+[View case study](projects/cedhealth.qmd){.card-link}
+[View on GitHub <span aria-hidden="true">↗</span>](https://github.com/Cedricamartin02/CedHealth){.card-link .external-project-link}
 :::
 :::
+:::
+
+::: {.project-card}
+::: {.project-card-body}
+::: {.project-card-heading}
+<p class="project-type">Automation · AI systems</p>
+<span class="repository-status status-private">Private repository</span>
+:::
+
+## Aster Desktop Assistant
+
+A Python desktop assistant organized around an action router, explicit permission handling, environment-backed integrations, local memory, news briefings, watchlists, and shared sessions.
+
+::: {.tag-list}
+<span>Python</span><span>PySide6</span><span>OpenAI API</span><span>APIs</span><span>Automation</span>
+:::
+
+::: {.project-links}
+[View case study <span aria-hidden="true">→</span>](projects/aster-assistant.qmd){.card-link}
+:::
+:::
+:::
+
+::: {.project-card}
+::: {.project-card-body}
+::: {.project-card-heading}
+<p class="project-type">Software development · Interactive systems</p>
+<span class="repository-status status-public">Public repository</span>
+:::
+
+## TowerDefend
+
+A browser-based tower-defense game built around a TypeScript game loop. The project includes wave progression, upgrades, achievements, persistent player state, responsive controls, and an installable offline-capable PWA shell.
+
+::: {.tag-list}
+<span>TypeScript</span><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>PWA</span>
+:::
+
+::: {.project-links}
+[View case study](projects/tower-defense.qmd){.card-link}
+[View on GitHub <span aria-hidden="true">↗</span>](https://github.com/Cedricamartin02/TowerDefenseGame){.card-link .external-project-link}
+:::
+:::
+:::
+::::
+
+::: {.repository-note}
+### Repository context
+
+The private `OCS` and `OCS2` repositories contain the same tracked Core 4x4 project tree and are represented by the single Core 4x4 case study above. The separate private `FitnessApp` repository is currently empty, so it is not presented as a finished portfolio project.
 :::
 :::
 

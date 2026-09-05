@@ -1,7 +1,7 @@
 ---
 title: "Core 4x4 Analytics Pipeline"
 pagetitle: "Core 4x4 Analytics Pipeline | Cedric Martin"
-description: "A business analytics case study covering a multi-source sales-data pipeline built with Python, Pandas, and Power BI."
+description: "A business analytics case study covering a multi-source sales-data application built with Python, Flask, SQL Server, and Power BI."
 page-layout: full
 title-block-banner: false
 ---
@@ -11,7 +11,7 @@ title-block-banner: false
 
 # Core 4x4 Analytics Pipeline
 
-A structured workflow for turning multi-source sales records into consistent, validated data ready for downstream analysis.
+A local Windows application for turning marketplace and internal sales exports into a standardized, traceable event ledger for review and downstream analysis.
 
 ::: {.case-meta}
 ::: {.meta-item}
@@ -20,13 +20,15 @@ Data preparation & quality
 :::
 ::: {.meta-item}
 <span>Tools</span>
-Python, Pandas, Power BI
+Python, Flask, SQL Server, Power BI
 :::
 ::: {.meta-item}
 <span>Context</span>
 Real business sales data
 :::
 :::
+
+<p class="private-notice">Private repository — project summary available publicly.</p>
 ::::
 
 ::::: {.case-study}
@@ -46,9 +48,9 @@ Real business sales data
 :::: {.case-content}
 ## Project summary
 
-Core 4x4 is a real-world business analytics project centered on sales data arriving from multiple platforms and in different source formats. The project establishes a repeatable path from raw records to standardized, analysis-ready data for use in Power BI.
+Core 4x4 is a real-world business analytics project centered on marketplace and internal sales data arriving in different export formats. The repository implements a local Windows application that turns those inputs into a standardized, traceable event ledger.
 
-The emphasis is not only on processing files, but on creating confidence in the resulting dataset through product and SKU mapping, duplicate handling, and validation.
+The workflow supports file-type detection, product and SKU mapping, exact-file and business-record duplicate handling, validation reports, optional SQL Server loading, and analytics views for Power BI. Proprietary records and business details are intentionally excluded from this public case study.
 
 ## Business problem
 
@@ -58,13 +60,13 @@ The project addresses the need for a shared analytical foundation: one that pres
 
 ## My role
 
-I worked across the data-preparation workflow, including reviewing source structures, shaping transformation logic in Python and Pandas, standardizing fields, supporting product and SKU mapping, handling duplicate records, and preparing the output for downstream Power BI work.
+I worked across the data-preparation workflow, including reviewing source structures, shaping Python transformation logic, standardizing fields, supporting product and SKU mapping, handling duplicate records, defining validation behavior, and preparing SQL and Power BI assets.
 
 I also used Git and GitHub to manage and track the project code. Specific organizational details and proprietary data are intentionally omitted.
 
 ## Solution
 
-The solution organizes the preparation work into distinct stages. Source-specific differences are addressed early, then records move through shared standardization, mapping, duplicate handling, and validation steps. The resulting dataset is structured for analysis and reporting rather than treated as a collection of unrelated exports.
+The solution organizes the work into source adapters, a canonical event schema, shared validation and mapping rules, and controlled output steps. Users can process files through a local desktop or browser interface, review warnings, save a standardized CSV and validation report, and optionally load approved results into SQL Server for Power BI.
 
 ::: {.solution-callout}
 ### Design principle
@@ -78,7 +80,7 @@ Separate source-specific cleanup from shared business rules. This makes the work
 ::: {.pipeline-step}
 <span class="step-number">01</span>
 <strong>Source files</strong>
-<small>Multiple platforms and formats</small>
+<small>eBay, Core 4x4, Amazon-format, and SKU mapping files</small>
 :::
 
 <span class="pipeline-arrow" aria-hidden="true">→</span>
@@ -110,7 +112,7 @@ Separate source-specific cleanup from shared business rules. This makes the work
 ::: {.pipeline-step}
 <span class="step-number">05</span>
 <strong>Validate & deliver</strong>
-<small>Prepare output for Power BI</small>
+<small>Save reports or load approved data for Power BI</small>
 :::
 ::::
 
@@ -140,23 +142,25 @@ Transformations need checks that surface unexpected values or structural issues 
 
 ## Key features
 
-- Processing logic built in Python with Pandas
-- Support for sales data arriving in multiple source formats
-- Consistent field and record standardization
-- Product and SKU mapping as part of the preparation workflow
-- Explicit duplicate handling and validation steps
-- Analysis-ready output intended for downstream Power BI use
-- Version control with Git and GitHub
+- Source adapters for tested eBay and Core 4x4 exports
+- Amazon-format adapter present but not yet validated with a real sample
+- Automatic source detection with a manual selection fallback
+- Canonical event ledger with source lineage and stable record keys
+- Approved SKU mapping from XLSX or CSV files
+- Exact-file and business-record duplicate handling
+- Validation reports with warning and review-needed records
+- Transactional SQL Server loading for approved runs
+- SQL analytics views, Power BI measures, and automated tests
 
 ## Technologies
 
 ::: {.tag-list .tag-list-large}
-<span>Python</span><span>Pandas</span><span>Power BI</span><span>Git</span><span>GitHub</span><span>Data Validation</span><span>ETL Concepts</span>
+<span>Python</span><span>Flask</span><span>OpenPyXL</span><span>SQL Server</span><span>SQL</span><span>Power BI</span><span>DAX</span><span>Data Validation</span>
 :::
 
 ## Business value
 
-The pipeline provides a more consistent foundation for sales analysis by making source differences, mapping rules, duplicate handling, and validation part of a repeatable process. This supports clearer downstream reporting and makes the data-preparation logic easier to inspect and maintain.
+The pipeline provides a more consistent foundation for sales analysis by making source differences, lineage, mapping rules, duplicate handling, and validation part of a repeatable process. The output can be reviewed as files before approved runs are stored for downstream reporting.
 
 No quantitative performance or financial claims are included because those outcomes have not been established for publication.
 
@@ -168,11 +172,11 @@ It also highlighted the importance of designing workflows in stages. A modular p
 
 ## Future improvements
 
-Potential next steps will be evaluated as the project develops. Areas worth exploring include expanded automated data-quality checks, clearer exception reporting, additional documentation for business rules, and a more formal refresh process for downstream reporting.
+The repository identifies Amazon sample validation and continued operational hardening as areas for future work. Additional improvements could extend automated quality checks and make the approved-load and Power BI refresh process easier to operate.
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}
-[About Me](../about.qmd){.button .button-primary}
+[Next: CedHealth →](cedhealth.qmd){.button .button-primary}
 :::
 ::::
 :::::

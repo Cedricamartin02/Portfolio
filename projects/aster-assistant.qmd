@@ -1,0 +1,131 @@
+---
+title: "Aster Desktop Assistant"
+pagetitle: "Aster Desktop Assistant | Cedric Martin"
+description: "A case study of a private Python desktop assistant focused on AI, automation, information workflows, and permission-aware actions."
+page-layout: full
+title-block-banner: false
+---
+
+:::: {.case-hero}
+<p class="eyebrow">Case study · Automation & AI systems</p>
+
+# Aster Desktop Assistant
+
+A private Python desktop application that combines conversational AI with permission-aware actions, local information management, and business-oriented data views.
+
+::: {.case-meta}
+::: {.meta-item}
+<span>Repository</span>
+Private
+:::
+::: {.meta-item}
+<span>Interface</span>
+PySide6 desktop UI
+:::
+::: {.meta-item}
+<span>Focus</span>
+Automation and information workflows
+:::
+:::
+
+<p class="private-notice">Private repository — project summary available publicly.</p>
+::::
+
+::::: {.case-study}
+:::: {.case-sidebar}
+<p class="sidebar-label">On this page</p>
+
+- [Overview](#project-overview)
+- [Goal](#problem-goal)
+- [What I built](#what-i-built)
+- [How it works](#how-it-works)
+- [Features](#key-features)
+- [Technologies](#technologies)
+- [Learnings](#what-i-learned)
+::::
+
+:::: {.case-content}
+## Project overview
+
+Aster is a Windows desktop assistant built in Python. The private source is organized into separate modules for the user interface, AI responses, action routing, permissions, external information services, local learning state, watchlists, news briefings, and shared sessions.
+
+This case study remains intentionally high-level: it describes the application architecture without exposing credentials, configuration values, or private source code.
+
+## Problem / goal
+
+The project explores how a desktop assistant can support more than open-ended conversation. Its structure connects natural-language requests to useful desktop and information tasks while keeping system actions explicit and permission-aware.
+
+## What I built
+
+The application includes a PySide6 interface, an OpenAI-backed response layer, a structured action router, a permission manager, environment-based integration configuration, and local stores for memory, learning concepts, and watchlist items.
+
+The source also includes economic and company dashboard workflows, categorized news briefings, voice-related dependencies, Excel workbook actions, and host/client shared chat sessions.
+
+## How it works
+
+:::: {.pipeline aria-label="Aster assistant workflow"}
+::: {.pipeline-step}
+<span class="step-number">01</span>
+<strong>User request</strong>
+<small>Text, voice, dashboard, or shortcut interaction</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">02</span>
+<strong>Intent routing</strong>
+<small>Conversation, briefing, watchlist, or desktop action</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">03</span>
+<strong>Permission check</strong>
+<small>Confirm actions that affect the local system</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">04</span>
+<strong>Service or action</strong>
+<small>AI, external data, local state, or automation</small>
+:::
+::::
+
+## Key features
+
+- Modular PySide6 desktop interface
+- OpenAI-backed response and text-to-speech configuration
+- Action router for desktop and productivity tasks
+- Explicit pending-permission management
+- Environment-backed API configuration
+- News briefings assembled from external information services
+- Company, market, and economic dashboard workflows
+- Persistent local watchlists, memory, and learning concepts
+- Shared host/client chat sessions over a local connection
+- Excel workbook support through OpenPyXL
+
+## Technologies
+
+::: {.tag-list .tag-list-large}
+<span>Python</span><span>PySide6</span><span>OpenAI API</span><span>REST APIs</span><span>OpenPyXL</span><span>Local Storage</span><span>Desktop Automation</span>
+:::
+
+## What I learned
+
+The project brings together user-interface state, external services, asynchronous work, local persistence, and operating-system actions. Its modular design reflects the importance of separating intent detection, permissions, execution, and presentation when automation can affect a user’s computer.
+
+## Future improvements
+
+The repository does not yet include a public README or automated test suite. Useful next steps would be documenting supported workflows, adding focused tests around routing and permissions, and formalizing error handling for optional external integrations.
+
+::: {.case-footer-nav}
+[← All Projects](../projects.qmd){.button .button-secondary}
+[Next: TowerDefend →](tower-defense.qmd){.button .button-primary}
+:::
+::::
+:::::
+

@@ -1,7 +1,7 @@
 ---
 title: "Home"
 pagetitle: "Cedric Martin | Business Analytics Portfolio"
-description: "Portfolio of Cedric Martin, a Business Analytics student focused on finance, data, and practical analytical systems."
+description: "Portfolio of Cedric Martin, a Business Analytics student focused on finance, data, automation, and practical business systems."
 page-layout: full
 title-block-banner: false
 ---
@@ -35,28 +35,66 @@ I build analytical tools and data workflows that turn business information into 
 ::: {.section-intro}
 <p class="eyebrow">Selected work</p>
 
-## Featured project
+## Featured projects
 
-A closer look at how I approach real business data, from raw inputs to analysis-ready outputs.
+Three projects that show how I approach data quality, analytical applications, automation, and practical business systems.
 :::
 
-::: {.project-grid .project-grid-featured}
+:::: {.project-grid .project-grid-home}
 ::: {.project-card .project-card-featured}
 ::: {.project-card-body}
-<p class="project-type">Data pipeline · Business analytics</p>
+<p class="project-type">Business analytics · Data engineering</p>
 
 ### Core 4x4 Analytics Pipeline
 
-A practical sales-data workflow that brings together multiple source formats, standardizes records, resolves product mappings and duplicates, and prepares reliable data for downstream analysis in Power BI.
+A private, real-business workflow that standardizes marketplace and internal sales exports, applies mapping and duplicate rules, validates results, and prepares approved data for SQL Server and Power BI.
 
 ::: {.tag-list}
-<span>Python</span><span>Pandas</span><span>Power BI</span><span>Data Quality</span><span>Git</span>
+<span>Python</span><span>Flask</span><span>SQL Server</span><span>Power BI</span>
 :::
 
-[Read the case study <span aria-hidden="true">→</span>](projects/core4x4.qmd){.card-link}
+::: {.project-links}
+[Read case study <span aria-hidden="true">→</span>](projects/core4x4.qmd){.card-link}
 :::
 :::
 :::
+
+::: {.project-card}
+::: {.project-card-body}
+<p class="project-type">Application development · Analytics</p>
+
+### CedHealth
+
+A Flask health-tracking application with accounts, goals, meal and workout tracking, nutrition analysis, SQLite persistence, and an installable PWA experience.
+
+::: {.tag-list}
+<span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span>
+:::
+
+::: {.project-links}
+[Read case study <span aria-hidden="true">→</span>](projects/cedhealth.qmd){.card-link}
+:::
+:::
+:::
+
+::: {.project-card}
+::: {.project-card-body}
+<p class="project-type">Automation · AI systems</p>
+
+### Aster Desktop Assistant
+
+A private Python desktop assistant that combines AI responses, permission-aware actions, local state, watchlists, market and economic information, and shared chat sessions.
+
+::: {.tag-list}
+<span>Python</span><span>PySide6</span><span>OpenAI API</span><span>Automation</span>
+:::
+
+::: {.project-links}
+[Read case study <span aria-hidden="true">→</span>](projects/aster-assistant.qmd){.card-link}
+:::
+:::
+:::
+::::
 :::
 
 ::: {.content-section .focus-section}
@@ -104,7 +142,7 @@ Reducing repetitive work through maintainable tools and business processes.
 ::: {.closing-cta}
 ## Interested in how I think and build?
 
-Explore the project case study or learn more about the perspective I bring to analytics work.
+Explore the project case studies or learn more about the perspective I bring to analytics work.
 
 [Explore Projects](projects.qmd){.button .button-primary}
 [Learn About Me](about.qmd){.button .button-secondary}

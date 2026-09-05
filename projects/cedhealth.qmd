@@ -1,0 +1,131 @@
+---
+title: "CedHealth"
+pagetitle: "CedHealth | Cedric Martin"
+description: "A case study of CedHealth, a Flask and SQLite health-tracking application."
+page-layout: full
+title-block-banner: false
+---
+
+:::: {.case-hero}
+<p class="eyebrow">Case study · Application development & analytics</p>
+
+# CedHealth
+
+A health-tracking web application that brings goals, meals, workouts, weight entries, and nutrition-oriented tools into one persistent Flask application.
+
+::: {.case-meta}
+::: {.meta-item}
+<span>Repository</span>
+Public
+:::
+::: {.meta-item}
+<span>Application</span>
+Flask web app / PWA
+:::
+::: {.meta-item}
+<span>Data layer</span>
+SQLite
+:::
+:::
+
+::: {.hero-actions}
+[View on GitHub <span aria-hidden="true">↗</span>](https://github.com/Cedricamartin02/CedHealth){.button .button-secondary}
+:::
+::::
+
+::::: {.case-study}
+:::: {.case-sidebar}
+<p class="sidebar-label">On this page</p>
+
+- [Overview](#project-overview)
+- [Goal](#problem-goal)
+- [What I built](#what-i-built)
+- [How it works](#how-it-works)
+- [Features](#key-features)
+- [Technologies](#technologies)
+- [Learnings](#what-i-learned)
+::::
+
+:::: {.case-content}
+## Project overview
+
+CedHealth is a public health-tracking application built with Python and Flask. Its repository contains a server application, SQLite data access, Jinja templates, a web manifest, a service worker, and deployment configuration for Render.
+
+The application organizes several related health workflows behind user accounts instead of treating meals, goals, and workouts as disconnected tools.
+
+## Problem / goal
+
+The project’s goal is to provide one place for users to establish personal goals and record health-related activity. The interface needs to support multiple workflows while maintaining user-specific data between sessions.
+
+## What I built
+
+The source implements authentication and onboarding, a dashboard, goal management, meal and weight logging, workout and exercise views, favorites, saved meals, and nutrition-oriented lookup and analysis routes.
+
+It also includes a web app manifest and service worker so the Flask application can provide an installable progressive-web-app experience.
+
+## How it works
+
+:::: {.pipeline aria-label="CedHealth application flow"}
+::: {.pipeline-step}
+<span class="step-number">01</span>
+<strong>User workflows</strong>
+<small>Accounts, goals, meals, workouts, and weight entries</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">02</span>
+<strong>Flask routes</strong>
+<small>Request handling and application logic</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">03</span>
+<strong>Jinja views</strong>
+<small>Server-rendered pages for each workflow</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">04</span>
+<strong>SQLite storage</strong>
+<small>Persistent application and user data</small>
+:::
+::::
+
+## Key features
+
+- Account signup, login, logout, and initial-goal setup
+- Dashboard and goal-management workflows
+- Meal creation, saved meals, favorites, notes, and meal-photo routes
+- Weight logging plus workout and exercise views
+- Nutrition search and meal-analysis endpoints
+- SQLite-backed persistence
+- PWA manifest and service-worker support
+- Render deployment configuration documented in the repository
+
+## Technologies
+
+::: {.tag-list .tag-list-large}
+<span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span><span>HTML / CSS</span><span>JavaScript</span><span>Gunicorn</span><span>PWA</span>
+:::
+
+## What I learned
+
+CedHealth demonstrates how a data-backed application grows beyond individual screens: authentication, persistence, navigation, and related user workflows need to work as one system. It also provided practical experience connecting backend routes, database operations, server-rendered views, and installable web-app behavior.
+
+## Future improvements
+
+Potential next steps include expanding automated tests, formalizing database migrations, consolidating dependency management, and continuing accessibility and responsive-interface review.
+
+::: {.case-footer-nav}
+[← All Projects](../projects.qmd){.button .button-secondary}
+[Next: Aster Assistant →](aster-assistant.qmd){.button .button-primary}
+:::
+::::
+:::::
+

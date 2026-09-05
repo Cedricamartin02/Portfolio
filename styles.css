@@ -128,9 +128,11 @@ main.content { margin: 0; padding: 0; max-width: none; }
 
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 .project-grid-featured { grid-template-columns: minmax(0, 1fr); }
+.project-grid-home { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .project-card {
   position: relative;
   overflow: hidden;
+  display: flex;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -138,12 +140,34 @@ main.content { margin: 0; padding: 0; max-width: none; }
 }
 
 .project-card-featured { border-left: 5px solid var(--accent); }
-.project-card-body { padding: clamp(1.6rem, 4vw, 2.6rem); }
+.project-card-body { display: flex; flex: 1; flex-direction: column; padding: clamp(1.6rem, 4vw, 2.6rem); }
 .project-card h2, .project-card h3 { margin: 0.3rem 0 0.9rem; }
 .project-card p { max-width: 770px; }
 .project-card-placeholder { background: var(--surface-alt); border-style: dashed; box-shadow: none; }
 .card-link { display: inline-block; margin-top: 1.5rem; font-weight: 750; text-decoration: none; }
 .card-link:hover { text-decoration: underline; }
+.project-card-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1rem; }
+.project-card-heading .project-type { margin-bottom: 0; }
+.repository-status,
+.private-notice {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.025em;
+}
+.repository-status { padding: 0.28rem 0.62rem; }
+.status-public { color: #17643a; background: #eaf7ef; border: 1px solid #ccebd8; }
+.status-private { color: #5e516f; background: #f3eff8; border: 1px solid #ded5e9; }
+.private-notice { margin-top: 1.5rem; padding: 0.42rem 0.78rem; color: #5e516f !important; background: #f3eff8; border: 1px solid #ded5e9; }
+.project-links { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin-top: auto; padding-top: 0.25rem; }
+.project-links .card-link { margin-top: 1.25rem; }
+.external-project-link { color: var(--ink-soft); }
+.repository-note { margin-top: 2rem; padding: 1.4rem 1.6rem; background: var(--surface-alt); border: 1px solid var(--border); border-radius: 12px; }
+.repository-note h3 { margin-top: 0; }
+.repository-note p:last-child { margin-bottom: 0; }
 
 .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.3rem; }
 .tag-list span {
@@ -223,6 +247,7 @@ main.content { margin: 0; padding: 0; max-width: none; }
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 2.5rem; padding: 5rem 0; }
   .hero-panel { max-width: 560px; }
   .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .project-grid-home { grid-template-columns: 1fr; }
   .case-study { grid-template-columns: 1fr; }
   .case-sidebar { display: none; }
   .pipeline { margin-inline: 0; flex-direction: column; }
@@ -247,4 +272,3 @@ main.content { margin: 0; padding: 0; max-width: none; }
   html { scroll-behavior: auto; }
   .button { transition: none; }
 }
-
