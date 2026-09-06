@@ -97,6 +97,28 @@ The project’s goal is to make a large structured file explorable through a sim
 - Compares adjacent records for the same country to identify the largest decline in the file’s existing order
 - Reports when no records match the requested year or country
 
+### Source excerpt: filtering a selected year
+
+```python
+with open("life-expectancy.csv") as life_data:
+    next(life_data)
+    for line in life_data:
+        data_stripped = line.strip().split(",")
+        country = data_stripped[0]
+        code = data_stripped[1]
+        year = data_stripped[2]
+        age = float(data_stripped[3])
+        if year == user_year:
+            count += 1
+            ages.append(age)
+            if age > user_highest_value:
+                user_highest_value = age
+                user_highest_country = country
+                user_highest_year = year
+```
+
+This excerpt is reproduced directly from `Data_Analysis.py`.
+
 ## Scope and limitations
 
 The analysis is intentionally lightweight. It uses direct string splitting rather than Python’s CSV module, requires an exact country-name match, and repeats the file-reading logic for each menu choice. The decline calculation also depends on records being grouped by country and ordered consistently in the source file.

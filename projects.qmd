@@ -116,6 +116,7 @@ A menu-driven Python analysis of a structured global life-expectancy dataset. It
 
 ::: {.project-links}
 [View case study <span aria-hidden="true">→</span>](projects/life-expectancy-analysis.qmd){.card-link}
+[Browse all coursework <span aria-hidden="true">→</span>](coursework.qmd){.card-link}
 :::
 :::
 :::

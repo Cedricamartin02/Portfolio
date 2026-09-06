@@ -1,0 +1,402 @@
+---
+title: "Coursework"
+pagetitle: "Coursework | Cedric Martin"
+description: "Selected CSE 111 and CSE 110 coursework showing progression in Python, data processing, functions, testing, calculations, and structured problem solving."
+page-layout: full
+title-block-banner: false
+---
+
+::: {.page-hero}
+<p class="eyebrow">Academic work</p>
+
+# Coursework
+
+A compact record of my CSE 111 and CSE 110 work, from introductory control flow to CSV-driven analysis, reusable functions, automated tests, and visual reporting. Major portfolio projects remain separate from these supporting assignments.
+:::
+
+::: {.content-section .coursework-section}
+::: {.section-intro}
+<p class="eyebrow">CSE 111</p>
+
+## Programming with Functions
+
+Coursework emphasizing decomposition into functions, structured data, file handling, calculations, testing, exception handling, and graphical interfaces.
+:::
+
+:::: {.course-grid}
+::: {.course-card .course-card-featured}
+<p class="course-file">stock_analyzer.py · stock_analyzer_test.py</p>
+
+### Stock Performance Analyzer
+
+Reads historical Nasdaq CSV records, calculates closing-price statistics, total and daily returns, and volatility, and includes a Plotly HTML-report generator. Six pytest functions exercise the core calculations.
+
+::: {.tag-list}
+<span>Python</span><span>CSV</span><span>Plotly</span><span>pytest</span><span>Financial Analysis</span>
+:::
+
+[View full case study <span aria-hidden="true">→</span>](projects/stock-performance-analyzer.qmd){.card-link}
+:::
+
+::: {.course-card}
+<p class="course-file">receipt.py · products.csv · request.csv · test_products.py</p>
+
+### Retail Receipt and Product Lookup
+
+Loads a product catalog into a dictionary, processes a separate request file, calculates item counts, subtotal, tax, and total, prints return-date information, and handles missing files, permissions, and unknown product IDs. A pytest file validates catalog loading.
+
+::: {.tag-list}
+<span>CSV</span><span>Dictionaries</span><span>Calculations</span><span>Exceptions</span><span>pytest</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">W5_students.py · students.csv · W5_test_students.py</p>
+
+### Student ID CSV Lookup
+
+Builds a dictionary keyed by student I-number and returns the matching student name or a no-match message. Its companion test checks filename handling, dictionary structure, and expected records.
+
+::: {.tag-list}
+<span>Python</span><span>CSV</span><span>Dictionaries</span><span>pytest</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w3_water_flow.py · w3_test_water_flow.py</p>
+
+### Water Distribution Calculations
+
+Uses separate functions to model water-column height, pressure gain, pipe and fitting losses, Reynolds number, and pipe-reduction loss. A pytest module defines numeric expectations for all six calculations.
+
+::: {.tag-list}
+<span>Functions</span><span>Engineering Math</span><span>Constants</span><span>pytest</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w4_chemistry.py · w4_formula.py · w4_test_chemistry_1.py</p>
+
+### Molar Mass and Chemistry Calculations
+
+Combines a periodic-table data structure with a course formula parser to calculate molar mass and convert a sample’s grams into moles. A companion test file defines expectations for the periodic-table structure.
+
+::: {.tag-list}
+<span>Dictionaries</span><span>Functions</span><span>Parsing</span><span>Calculations</span><span>pytest</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">gui.py · heart_rate.py · number_entry.py</p>
+
+### Tkinter GUI Exercises
+
+Implements event-driven interfaces for a circle-area calculator and an exercise heart-rate range display. The exercises use labels, validated numeric entry widgets, keyboard events, grid layout, and clear-button callbacks.
+
+::: {.tag-list}
+<span>tkinter</span><span>GUI</span><span>Events</span><span>Input Validation</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w2_sentences.py</p>
+
+### Random Sentence Generator
+
+Composes randomized sentences from determiner, noun, verb, preposition, and prepositional-phrase functions while accounting for grammatical quantity and tense.
+
+::: {.tag-list}
+<span>Functions</span><span>Randomization</span><span>Lists</span><span>String Composition</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w2_can_sizes.py</p>
+
+### Can Size Efficiency Analysis
+
+Defines reusable volume, surface-area, storage-efficiency, and cost-efficiency functions, then compares a supplied collection of can dimensions and costs.
+
+::: {.tag-list}
+<span>Functions</span><span>Geometry</span><span>Efficiency Ratios</span><span>Iteration</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w1_tire_volume.py · volumes.txt</p>
+
+### Tire Volume and File Logging
+
+Calculates tire volume from width, aspect ratio, and wheel diameter, matches several hard-coded inventory sizes, and appends dated measurements—and a phone number when supplied—to a text log.
+
+::: {.tag-list}
+<span>Calculations</span><span>Conditionals</span><span>File I/O</span><span>datetime</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w2_fuel_efficiency.py</p>
+
+### Fuel Efficiency Converter
+
+Separates odometer-based miles-per-gallon and liters-per-100-kilometers calculations into reusable functions with formatted command-line output.
+
+::: {.tag-list}
+<span>Functions</span><span>Unit Conversion</span><span>Calculations</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w3_names.py · w3_address.py · matching test files</p>
+
+### Name and Address String Utilities
+
+Creates and extracts formatted names and parses city, state, and ZIP-code components from structured U.S. addresses. Companion pytest files cover typical and boundary string cases.
+
+::: {.tag-list}
+<span>String Parsing</span><span>Functions</span><span>Slicing</span><span>pytest</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w1_boxes.py · w1_heart_rate.py · w1_discounts.py · w2_cone_volume.py</p>
+
+### Introductory Business and Measurement Calculations
+
+A compact set of programs covering box requirements, exercise heart-rate ranges, weekday retail discounts and sales tax, and right-cone volume.
+
+::: {.tag-list}
+<span>Python</span><span>Formulas</span><span>Conditionals</span><span>Formatting</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">w2_get_initials_functions · w4_pass_args.py · fruit.py</p>
+
+### Function and Collection Practice
+
+Practice files exploring optional function arguments, initials formatting, value-versus-list mutation behavior, and common list operations. The list exercise remains an incomplete working file and is presented as practice rather than a finished program.
+
+::: {.tag-list}
+<span>Functions</span><span>Arguments</span><span>Lists</span><span>Mutation</span>
+:::
+:::
+::::
+
+::: {.coursework-code}
+### Source excerpt: loading product records
+
+```python
+def read_dictionary(filename,key_column_index):
+    products_dict = {}
+    with open(filename, "rt") as csv_file:
+        reader = csv.reader(csv_file)
+        next(reader)
+        for row in reader:
+            if len(row) != 0:
+                key = row[key_column_index]
+                products_dict[key] = row
+    return products_dict
+```
+
+Reproduced directly from `receipt.py`.
+:::
+:::
+
+::: {.content-section .coursework-section}
+::: {.section-intro}
+<p class="eyebrow">CSE 110</p>
+
+## Introduction to Programming
+
+Coursework showing progression through variables, calculations, conditionals, loops, lists, functions, user interaction, and structured-file analysis.
+:::
+
+:::: {.course-grid}
+::: {.course-card .course-card-featured}
+<p class="course-file">Data_Analysis.py · life-expectancy.csv</p>
+
+### Life Expectancy Data Analysis
+
+Explores more than 19,000 country-year records through a menu for overall extrema, year and country filters, group averages, and the largest consecutive recorded decline within a country.
+
+::: {.tag-list}
+<span>Python</span><span>CSV Data</span><span>Filtering</span><span>Aggregation</span><span>Loops</span>
+:::
+
+[View case study <span aria-hidden="true">→</span>](projects/life-expectancy-analysis.qmd){.card-link}
+:::
+
+::: {.course-card}
+<p class="course-file">shopping_cart.py</p>
+
+### Shopping Cart
+
+Maintains parallel item and price lists through a menu that supports adding items, displaying numbered contents, removing a selection, and calculating the cart total.
+
+::: {.tag-list}
+<span>Lists</span><span>Loops</span><span>Menu Logic</span><span>Calculations</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">word_puzzle.py</p>
+
+### Word Puzzle
+
+Implements a limited-attempt word game that validates guess length and distinguishes correct-position letters, present letters, and absent letters through case and placeholder output.
+
+::: {.tag-list}
+<span>Loops</span><span>Strings</span><span>Indexing</span><span>Conditionals</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">Adventure_game.py</p>
+
+### Branching Adventure Game
+
+Uses nested choices and normalized text input to move the player through a branching story with multiple victory and failure endings.
+
+::: {.tag-list}
+<span>Conditionals</span><span>Branching Logic</span><span>User Input</span><span>Strings</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">Windchill.py</p>
+
+### Windchill Calculator
+
+Converts Celsius input to Fahrenheit when needed, defines the windchill formula as a function, and reports calculated values at five-mile-per-hour intervals through 60 mph.
+
+::: {.tag-list}
+<span>Functions</span><span>Unit Conversion</span><span>Loops</span><span>Formulas</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">meal_price_cal.py</p>
+
+### Meal Price Calculator
+
+Collects meal prices and quantities, sales-tax rate, tip, and payment information, then formats a receipt-style summary with subtotal, tax, total, payment, and change fields.
+
+::: {.tag-list}
+<span>Arithmetic</span><span>User Input</span><span>Currency Formatting</span><span>Output Design</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">function_pratice.py</p>
+
+### Function-Based Area Calculator
+
+Uses separate square, rectangle, and circle functions behind a repeated menu, returning the requested area until the user selects quit.
+
+::: {.tag-list}
+<span>Functions</span><span>Loops</span><span>Geometry</span><span>Menu Logic</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">ID badge generator.py</p>
+
+### Employee ID Badge Generator
+
+Collects identity, contact, job, appearance, start-month, and training fields and formats them into a structured command-line badge.
+
+::: {.tag-list}
+<span>Strings</span><span>Formatting</span><span>User Input</span><span>Layout</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">hr_system.py · hr_system.txt</p>
+
+### HR Record Reader
+
+Reads space-delimited employee records from a text file and extracts the employee name and job field for display.
+
+::: {.tag-list}
+<span>File I/O</span><span>Parsing</span><span>Loops</span><span>Strings</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">guess_my_number.py</p>
+
+### Guess My Number
+
+Generates a random target and repeatedly guides the user with higher-or-lower feedback until the correct number is entered.
+
+::: {.tag-list}
+<span>Loops</span><span>Conditionals</span><span>Random</span><span>User Input</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">Grade_Calculator.py</p>
+
+### Grade Calculator
+
+Maps a numeric percentage to a letter grade with an if/elif chain and reports whether the percentage meets the program’s passing threshold.
+
+::: {.tag-list}
+<span>Conditionals</span><span>Comparisons</span><span>User Input</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">Clever Stories.py</p>
+
+### Clever Stories
+
+Collects words from the user and interpolates them into a formatted Mad Lib-style story, applying capitalization and spacing to the final output.
+
+::: {.tag-list}
+<span>Strings</span><span>Input</span><span>Formatting</span><span>Concatenation</span>
+:::
+:::
+
+::: {.course-card}
+<p class="course-file">Areas.py · Boolean.py · comp_strings.py · files.py · functions.py · if.py · Kannin.py · Libraries.py · Lists_numbers.py · loops.py · Math.py · practice_functions.py · running.py</p>
+
+### Foundational Python Exercises
+
+Short practice files covering arithmetic, library exploration, boolean expressions, conditionals, list iteration, string normalization, file and function syntax, and input validation. They are grouped as learning exercises rather than presented as finished applications.
+
+::: {.tag-list}
+<span>Python Basics</span><span>Control Flow</span><span>Lists</span><span>Functions</span>
+:::
+:::
+::::
+
+::: {.coursework-code}
+### Source excerpt: reusable windchill functions
+
+```python
+def conversion(user_choice,temp):
+    if user_choice == "C":
+        F = temp * (9/5) +32
+        return F
+    else:
+        return temp
+
+def windchill(new_temp,wind):
+    windchill = 35.74 + 0.6215*(new_temp) - 35.75*(wind**0.16) + 0.4275*(new_temp)*(wind**0.16)
+    return windchill
+```
+
+Reproduced directly from `Windchill.py`.
+:::
+:::
+
+::: {.closing-cta}
+## See how the coursework connects to larger work
+
+The featured projects apply these foundations to financial analysis, data engineering, automation, and business-oriented reporting.
+
+[View Featured Projects](projects.qmd){.button .button-primary}
+[Stock Analyzer Case Study](projects/stock-performance-analyzer.qmd){.button .button-secondary}
+:::

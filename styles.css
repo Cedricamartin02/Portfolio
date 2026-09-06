@@ -182,6 +182,19 @@ main.content { margin: 0; padding: 0; max-width: none; }
 }
 .tag-list-large span { font-size: 0.85rem; padding: 0.42rem 0.8rem; }
 
+.coursework-section { padding-top: 4.5rem; }
+.coursework-section + .coursework-section { border-top: 1px solid var(--border); }
+.course-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.course-card { padding: 1.35rem 1.45rem; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; }
+.course-card-featured { border-left: 4px solid var(--accent); }
+.course-card h3 { margin: 0.2rem 0 0.55rem; }
+.course-card p { margin-bottom: 0; font-size: 0.92rem; }
+.course-card .tag-list { margin-top: 1rem; }
+.course-card .tag-list span { padding: 0.25rem 0.58rem; font-size: 0.72rem; }
+.course-file { color: var(--muted) !important; font-family: "Cascadia Code", Consolas, monospace; font-size: 0.72rem !important; }
+.coursework-code { margin: 2.5rem 0 3.5rem; }
+.coursework-code pre { border: 1px solid var(--border); border-radius: 12px; }
+
 .focus-section { padding-top: 4rem; }
 .focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
 .focus-card { background: var(--surface); padding: 1.7rem; }
@@ -260,7 +273,7 @@ main.content { margin: 0; padding: 0; max-width: none; }
   .hero { padding: 4rem 0; }
   .page-hero, .case-hero { padding: 4.5rem 0 3rem; }
   .content-section, .narrow-section { padding: 3.5rem 0; }
-  .project-grid, .focus-grid, .challenge-grid { grid-template-columns: 1fr; }
+  .project-grid, .focus-grid, .challenge-grid, .course-grid { grid-template-columns: 1fr; }
   .resume-panel { grid-template-columns: 1fr; }
   .resume-icon { width: 82px; }
   .case-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }

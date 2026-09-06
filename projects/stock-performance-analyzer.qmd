@@ -93,6 +93,24 @@ It is an educational historical-analysis tool, not investment software and not f
 
 The CSV reader converts monetary fields to floating-point values and volume to an integer after stripping formatting characters. Dates remain as source strings in the dictionary and are converted to `datetime` values when chronological ordering is required.
 
+### Source excerpt: chronological total return
+
+```python
+def calculate_total_return(stock_dict):
+    date_list = []
+    for date in stock_dict:
+        converted_date = dt.datetime.strptime(date,"%m/%d/%Y")
+        date_list.append((converted_date, date))
+    start_date = min(date_list)
+    end_date = max(date_list)
+    start_price = stock_dict[start_date[1]]["close"]
+    end_price = stock_dict[end_date[1]]["close"]
+    total_return = ((end_price - start_price) / start_price) * 100
+    return total_return
+```
+
+This excerpt is reproduced directly from `stock_analyzer.py`.
+
 ## Financial calculations
 
 The implementation calculates:
