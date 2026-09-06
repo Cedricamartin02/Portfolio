@@ -1,0 +1,387 @@
+[
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Experience & skills\n\n\n\nThis page will provide a downloadable summary of my education, technical skills, and project work."
+  },
+  {
+    "objectID": "resume.html#resume-pdf-not-yet-available",
+    "href": "resume.html#resume-pdf-not-yet-available",
+    "title": "Resume",
+    "section": "Resume PDF not yet available",
+    "text": "Resume PDF not yet available\nThe repository does not currently include a resume PDF. This placeholder intentionally avoids linking to a sample or unfinished document.\nTo publish it later: add the file as assets/Cedric-Martin-Resume.pdf, then replace this note with a view/download button."
+  },
+  {
+    "objectID": "projects/tower-defense.html",
+    "href": "projects/tower-defense.html",
+    "title": "Tower Defense Game",
+    "section": "",
+    "text": "Case study · Interactive software development\n\n\n\nA browser-based tower-defense experience built around a TypeScript game loop and delivered as an installable progressive web app.\n\n\nRepository Public\n\n\nApplication React / TypeScript PWA\n\n\nFocus Interactive systems\n\n\n\nView on GitHub ↗"
+  },
+  {
+    "objectID": "projects/tower-defense.html#project-overview",
+    "href": "projects/tower-defense.html#project-overview",
+    "title": "Tower Defense Game",
+    "section": "Project overview",
+    "text": "Project overview\nThe repository names the application TowerDefend. It is a public React and TypeScript project with a dedicated game-engine layer and a component-based interface. Its source includes game entities, state and rendering modules, achievement and upgrade systems, an Express production entry point, and progressive-web-app configuration."
+  },
+  {
+    "objectID": "projects/tower-defense.html#problem-goal",
+    "href": "projects/tower-defense.html#problem-goal",
+    "title": "Tower Defense Game",
+    "section": "Problem / goal",
+    "text": "Problem / goal\nThe project’s goal is to create an interactive browser game whose real-time mechanics, progression systems, interface state, and persistent player data remain coordinated as the application grows."
+  },
+  {
+    "objectID": "projects/tower-defense.html#what-i-built",
+    "href": "projects/tower-defense.html#what-i-built",
+    "title": "Tower Defense Game",
+    "section": "What I built",
+    "text": "What I built\nThe game engine manages waves, enemies, towers, bullets, collisions, targeting, rewards, and upgrade effects. Supporting modules handle achievements, player statistics, skill progression, audio, and browser storage, while React components provide the surrounding dashboard and controls.\nThe Vite PWA configuration adds an install prompt and offline app-shell caching. The repository documents local development, production builds, and static deployment preparation; it does not claim a live demo yet."
+  },
+  {
+    "objectID": "projects/tower-defense.html#how-it-works",
+    "href": "projects/tower-defense.html#how-it-works",
+    "title": "Tower Defense Game",
+    "section": "How it works",
+    "text": "How it works\n\n\n01 React interface Dashboard, controls, achievements, and upgrades\n\n→\n\n02 Game engine Wave timing, targeting, collisions, and rewards\n\n→\n\n03 Progression systems Statistics, skills, upgrades, and achievements\n\n→\n\n04 Browser persistence Local player state and PWA app shell"
+  },
+  {
+    "objectID": "projects/tower-defense.html#key-features",
+    "href": "projects/tower-defense.html#key-features",
+    "title": "Tower Defense Game",
+    "section": "Key features",
+    "text": "Key features\n\nTypeScript game loop with separate engine, entity, state, HUD, and renderer modules\nWave-based enemy spawning and tower targeting\nUpgrade, skill, achievement, and player-stat systems\nPersistent browser storage for player progress\nResponsive React interface and reusable UI components\nAudio, texture, and icon assets\nInstallable PWA shell with offline caching\nVite build process and Express production entry point"
+  },
+  {
+    "objectID": "projects/tower-defense.html#technologies",
+    "href": "projects/tower-defense.html#technologies",
+    "title": "Tower Defense Game",
+    "section": "Technologies",
+    "text": "Technologies\n\nTypeScriptReactViteTailwind CSSExpressPWA"
+  },
+  {
+    "objectID": "projects/tower-defense.html#what-i-learned",
+    "href": "projects/tower-defense.html#what-i-learned",
+    "title": "Tower Defense Game",
+    "section": "What I learned",
+    "text": "What I learned\nThe project demonstrates how real-time state differs from conventional page state. Game mechanics, rendering, progression, and interface feedback need clear boundaries while still responding to the same event loop and persistent player model."
+  },
+  {
+    "objectID": "projects/tower-defense.html#future-improvements",
+    "href": "projects/tower-defense.html#future-improvements",
+    "title": "Tower Defense Game",
+    "section": "Future improvements",
+    "text": "Future improvements\nThe repository does not include automated tests and marks the live demo as forthcoming. Useful next steps would be testing progression rules, profiling performance across devices, and publishing the prepared production build.\n\n← All Projects Core 4x4 Case Study"
+  },
+  {
+    "objectID": "projects/cedhealth.html",
+    "href": "projects/cedhealth.html",
+    "title": "CedHealth",
+    "section": "",
+    "text": "Case study · Data-backed application\n\n\n\nA health-tracking web application that brings goals, meals, workouts, weight entries, and nutrition-oriented tools into one persistent Flask application.\n\n\nRepository Public\n\n\nApplication Flask web app / PWA\n\n\nData layer SQLite\n\n\n\nView on GitHub ↗"
+  },
+  {
+    "objectID": "projects/cedhealth.html#project-overview",
+    "href": "projects/cedhealth.html#project-overview",
+    "title": "CedHealth",
+    "section": "Project overview",
+    "text": "Project overview\nCedHealth is a public health-tracking application built with Python and Flask. Its repository contains a server application, SQLite data access, Jinja templates, a web manifest, a service worker, and a Gunicorn production entry point.\nThe application organizes several related health workflows behind user accounts instead of treating meals, goals, and workouts as disconnected tools."
+  },
+  {
+    "objectID": "projects/cedhealth.html#problem-goal",
+    "href": "projects/cedhealth.html#problem-goal",
+    "title": "CedHealth",
+    "section": "Problem / goal",
+    "text": "Problem / goal\nThe project’s goal is to provide one place for users to establish personal goals and record health-related activity. The interface needs to support multiple workflows while maintaining user-specific data between sessions."
+  },
+  {
+    "objectID": "projects/cedhealth.html#what-i-built",
+    "href": "projects/cedhealth.html#what-i-built",
+    "title": "CedHealth",
+    "section": "What I built",
+    "text": "What I built\nThe source implements authentication and onboarding, a dashboard, goal management, meal and weight logging, workout and exercise views, favorites, saved meals, and nutrition-oriented lookup and analysis routes.\nIt also includes a web app manifest and service worker so the Flask application can provide an installable progressive-web-app experience."
+  },
+  {
+    "objectID": "projects/cedhealth.html#how-it-works",
+    "href": "projects/cedhealth.html#how-it-works",
+    "title": "CedHealth",
+    "section": "How it works",
+    "text": "How it works\n\n\n01 User workflows Accounts, goals, meals, workouts, and weight entries\n\n→\n\n02 Flask routes Request handling and application logic\n\n→\n\n03 Jinja views Server-rendered pages for each workflow\n\n→\n\n04 SQLite storage Persistent application and user data"
+  },
+  {
+    "objectID": "projects/cedhealth.html#key-features",
+    "href": "projects/cedhealth.html#key-features",
+    "title": "CedHealth",
+    "section": "Key features",
+    "text": "Key features\n\nAccount signup, login, logout, and initial-goal setup\nDashboard and goal-management workflows\nMeal creation, saved meals, favorites, notes, and meal-photo routes\nWeight logging plus workout and exercise views\nNutrition search and meal-analysis endpoints\nSQLite-backed persistence\nPWA manifest and service-worker support\nGunicorn production entry point configured through a Procfile"
+  },
+  {
+    "objectID": "projects/cedhealth.html#technologies",
+    "href": "projects/cedhealth.html#technologies",
+    "title": "CedHealth",
+    "section": "Technologies",
+    "text": "Technologies\n\nPythonFlaskSQLiteJinjaHTML / CSSJavaScriptGunicornPWA"
+  },
+  {
+    "objectID": "projects/cedhealth.html#what-i-learned",
+    "href": "projects/cedhealth.html#what-i-learned",
+    "title": "CedHealth",
+    "section": "What I learned",
+    "text": "What I learned\nCedHealth demonstrates how a data-backed application grows beyond individual screens: authentication, persistence, navigation, and related user workflows need to work as one system. It also provided practical experience connecting backend routes, database operations, server-rendered views, and installable web-app behavior."
+  },
+  {
+    "objectID": "projects/cedhealth.html#future-improvements",
+    "href": "projects/cedhealth.html#future-improvements",
+    "title": "CedHealth",
+    "section": "Future improvements",
+    "text": "Future improvements\nThe repository does not include a project test suite or a formal migration framework. Useful next steps would be adding route and data-layer tests, formalizing schema migrations, consolidating dependency management, and continuing accessibility review.\n\n← All Projects Next: Aster Assistant →"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "Business Analytics · Finance · Data\n\n\n\nI build analytical tools and data workflows that turn business information into clear, useful inputs for decision-making.\n\nView Projects About Me Resume\n\n\n\n\n\nAreas of focus\n\n\nBusiness and data analytics\nFinancial analysis and FP&A\nData pipelines and automation\nDecision-ready reporting"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Home",
+    "section": "Featured projects",
+    "text": "Featured projects\nThree projects that show how I approach reliable data pipelines, data-backed applications, and practical automation."
+  },
+  {
+    "objectID": "index.html#what-i-work-with",
+    "href": "index.html#what-i-work-with",
+    "title": "Home",
+    "section": "What I work with",
+    "text": "What I work with\nMy interests sit where analytical thinking, financial context, and useful business systems meet."
+  },
+  {
+    "objectID": "index.html#interested-in-how-i-think-and-build",
+    "href": "index.html#interested-in-how-i-think-and-build",
+    "title": "Home",
+    "section": "Interested in how I think and build?",
+    "text": "Interested in how I think and build?\nExplore the project case studies or learn more about the perspective I bring to analytics work.\nExplore Projects Learn About Me"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About me\n\n\n\nI’m Cedric Martin, a Business Analytics student at BYU–Idaho interested in the intersection of analytics, finance, software, and business systems."
+  },
+  {
+    "objectID": "about.html#how-i-approach-analytics",
+    "href": "about.html#how-i-approach-analytics",
+    "title": "About",
+    "section": "How I approach analytics",
+    "text": "How I approach analytics\nI’m drawn to work that begins with a practical business question and ends with something people can actually use: a clean dataset, a repeatable workflow, a clear report, or a better way to make a decision.\nMy approach combines business context with hands-on technical work. I enjoy understanding how information moves through an organization, finding where inconsistent data or manual effort gets in the way, and building structured solutions with tools such as Python, SQL, and Power BI.\nFinance and FP&A are especially interesting to me because they connect detailed analysis to planning and performance. More broadly, I’m motivated by roles where analytical thinking can improve how a business operates.\n\n\n01\n\nStart with the decision\nGood analysis is shaped by the question it needs to answer.\n\n\n\n02\n\nBuild for reliability\nClear structure, validation, and documentation make analytical work more useful.\n\n\n\n03\n\nCommunicate clearly\nThe value of analysis depends on whether others can understand and act on it."
+  },
+  {
+    "objectID": "about.html#see-my-work",
+    "href": "about.html#see-my-work",
+    "title": "About",
+    "section": "See my work",
+    "text": "See my work\nRead the Core 4x4 case study to see how these ideas show up in a real analytics project.\nView Projects Resume"
+  },
+  {
+    "objectID": "projects/aster-assistant.html",
+    "href": "projects/aster-assistant.html",
+    "title": "Aster Desktop Assistant",
+    "section": "",
+    "text": "Case study · Automation & AI systems\n\n\n\nA private Python desktop application that combines conversational AI with permission-aware actions, local information management, and business-oriented data views.\n\n\nRepository Private\n\n\nInterface PySide6 desktop UI\n\n\nFocus Automation and information workflows\n\n\n\nPrivate repository — project summary available publicly."
+  },
+  {
+    "objectID": "projects/aster-assistant.html#project-overview",
+    "href": "projects/aster-assistant.html#project-overview",
+    "title": "Aster Desktop Assistant",
+    "section": "Project overview",
+    "text": "Project overview\nAster is a Windows desktop assistant built in Python. The private source is organized into separate modules for the user interface, AI responses, action routing, permissions, external information services, local learning state, watchlists, news briefings, and shared sessions.\nThis case study remains intentionally high-level: it describes the application architecture without exposing credentials, configuration values, or private source code."
+  },
+  {
+    "objectID": "projects/aster-assistant.html#problem-goal",
+    "href": "projects/aster-assistant.html#problem-goal",
+    "title": "Aster Desktop Assistant",
+    "section": "Problem / goal",
+    "text": "Problem / goal\nThe project explores how a desktop assistant can support more than open-ended conversation. Its structure connects natural-language requests to useful desktop and information tasks while keeping system actions explicit and permission-aware."
+  },
+  {
+    "objectID": "projects/aster-assistant.html#what-i-built",
+    "href": "projects/aster-assistant.html#what-i-built",
+    "title": "Aster Desktop Assistant",
+    "section": "What I built",
+    "text": "What I built\nThe application includes a PySide6 interface, an OpenAI-backed response layer, a structured action router, a permission manager, environment-based integration configuration, and local stores for saved state, learning concepts, and watchlist items.\nThe source also includes economic and company dashboard workflows, categorized news briefings, voice-related dependencies, Excel workbook actions, and host/client shared chat sessions."
+  },
+  {
+    "objectID": "projects/aster-assistant.html#how-it-works",
+    "href": "projects/aster-assistant.html#how-it-works",
+    "title": "Aster Desktop Assistant",
+    "section": "How it works",
+    "text": "How it works\n\n\n01 User request Text, voice, dashboard, or shortcut interaction\n\n→\n\n02 Intent routing Conversation, briefing, watchlist, or desktop action\n\n→\n\n03 Permission check Confirm actions that affect the local system\n\n→\n\n04 Service or action AI, external data, local state, or automation"
+  },
+  {
+    "objectID": "projects/aster-assistant.html#key-features",
+    "href": "projects/aster-assistant.html#key-features",
+    "title": "Aster Desktop Assistant",
+    "section": "Key features",
+    "text": "Key features\n\nModular PySide6 desktop interface\nOpenAI-backed response and text-to-speech configuration\nAction router for desktop and productivity tasks\nExplicit pending-permission management\nEnvironment-backed API configuration\nNews briefings assembled from external information services\nCompany, market, and economic dashboard workflows\nPersistent local watchlists, saved state, and learning concepts\nShared host/client chat sessions over a local connection\nExcel workbook support through OpenPyXL"
+  },
+  {
+    "objectID": "projects/aster-assistant.html#technologies",
+    "href": "projects/aster-assistant.html#technologies",
+    "title": "Aster Desktop Assistant",
+    "section": "Technologies",
+    "text": "Technologies\n\nPythonPySide6OpenAI APIREST APIsOpenPyXLLocal StorageDesktop Automation"
+  },
+  {
+    "objectID": "projects/aster-assistant.html#what-i-learned",
+    "href": "projects/aster-assistant.html#what-i-learned",
+    "title": "Aster Desktop Assistant",
+    "section": "What I learned",
+    "text": "What I learned\nThe project brings together user-interface state, external services, asynchronous work, local persistence, and operating-system actions. Its modular design reflects the importance of separating intent detection, permissions, execution, and presentation when automation can affect a user’s computer."
+  },
+  {
+    "objectID": "projects/aster-assistant.html#future-improvements",
+    "href": "projects/aster-assistant.html#future-improvements",
+    "title": "Aster Desktop Assistant",
+    "section": "Future improvements",
+    "text": "Future improvements\nThe repository does not yet include a README or automated test suite. Useful next steps would be documenting supported workflows, adding focused tests around routing and permissions, and formalizing error handling for optional external integrations.\n\n← All Projects Next: Tower Defense Game →"
+  },
+  {
+    "objectID": "projects/core4x4.html",
+    "href": "projects/core4x4.html",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "",
+    "text": "Case study · Business analytics\n\n\n\nA local Windows application for turning marketplace and internal sales exports into a standardized, traceable event ledger for review and downstream analysis.\n\n\nFocus Data preparation & quality\n\n\nTools Python, Flask, SQL Server, Power BI\n\n\nContext Real business sales data\n\n\n\nPrivate repository — project summary available publicly."
+  },
+  {
+    "objectID": "projects/core4x4.html#project-summary",
+    "href": "projects/core4x4.html#project-summary",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Project summary",
+    "text": "Project summary\nCore 4x4 is a real-business analytics project centered on marketplace and internal sales data arriving in different export formats. The repository implements a local Windows application that turns those inputs into a standardized, traceable event ledger.\nThe workflow supports file-type detection, product and SKU mapping, exact-file and business-record duplicate handling, validation reports, optional SQL Server loading, and analytics views for Power BI. Proprietary records and business details are intentionally excluded from this public case study."
+  },
+  {
+    "objectID": "projects/core4x4.html#business-problem",
+    "href": "projects/core4x4.html#business-problem",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Business problem",
+    "text": "Business problem\nSales information from separate platforms can differ in structure, naming conventions, product identifiers, and record quality. Without a consistent preparation process, those differences make it harder to combine records and use them reliably in reporting.\nThe project addresses the need for a shared analytical foundation: one that preserves the useful information in each source while applying common business rules before analysis."
+  },
+  {
+    "objectID": "projects/core4x4.html#my-approach",
+    "href": "projects/core4x4.html#my-approach",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "My approach",
+    "text": "My approach\nI approached the project as a data reliability problem rather than a simple file-conversion task. I reviewed source structures, built Python transformation and identity logic, defined validation behavior, implemented approved product and SKU mapping, and prepared SQL and Power BI assets around the resulting event ledger.\nSpecific organizational details, credentials, and proprietary records are intentionally omitted."
+  },
+  {
+    "objectID": "projects/core4x4.html#architecture",
+    "href": "projects/core4x4.html#architecture",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Architecture",
+    "text": "Architecture\nThe application separates source adapters, a canonical event schema, shared validation and mapping rules, batch orchestration, and controlled delivery steps. Users can process files through a local desktop or browser interface, review warnings, save a standardized CSV and validation report, and optionally load an approved result into SQL Server for Power BI.\n\nDesign principle\nSeparate source-specific cleanup from shared business rules. This makes the workflow easier to reason about and extend when a source changes or a new one is introduced."
+  },
+  {
+    "objectID": "projects/core4x4.html#data-workflow",
+    "href": "projects/core4x4.html#data-workflow",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Data workflow",
+    "text": "Data workflow\n\n\n01 Source files Tested eBay and Core 4x4 exports, plus approved SKU mappings\n\n→\n\n02 Ingest & standardize Align fields, formats, and data types\n\n→\n\n03 Map products Apply approved SKU mappings without changing source identifiers\n\n→\n\n04 Deduplicate Separate exact file copies from repeated business records\n\n→\n\n05 Validate & deliver Save reports or load approved data for Power BI"
+  },
+  {
+    "objectID": "projects/core4x4.html#key-technical-decisions",
+    "href": "projects/core4x4.html#key-technical-decisions",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Key technical decisions",
+    "text": "Key technical decisions\n\n\nPreserve event meaning\nThe canonical schema keeps record_type separate from row grain so order lines and standalone financial events—such as fees, payouts, holds, and refunds—are not forced into the same meaning.\n\n\nSeparate identity levels\nThe pipeline uses a file hash for exact uploaded bytes and a business record_key for cross-file deduplication. Those identifiers answer different questions and remain separate.\n\n\nKeep legitimate repeats\nRows with the same logical identity receive occurrence-aware record keys in source order. Repeated real events remain distinct, while a harmlessly resaved report reproduces the same sequence of keys.\n\n\nControl mapping\nOnly explicitly approved SKU mappings populate the standardized SKU. Suggested, missing, or conflicting mappings remain visible for review instead of being silently accepted."
+  },
+  {
+    "objectID": "projects/core4x4.html#data-quality-and-validation",
+    "href": "projects/core4x4.html#data-quality-and-validation",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Data quality and validation",
+    "text": "Data quality and validation\nSource detection uses report-column signatures rather than filenames. Unsupported or uncertain files require manual source selection, and questionable rows are preserved with either warning or review_needed status instead of being silently discarded.\nThe output retains provenance fields for the import run, source file, system, report, row number, and adapter version. Automated tests cover schema consistency, long text identifiers, duplicate files, cross-file business duplicates, occurrence-aware record identity, approved mapping behavior, SQL contracts, and Power BI assets. Database integration tests are available separately when SQL Server is configured."
+  },
+  {
+    "objectID": "projects/core4x4.html#key-capabilities",
+    "href": "projects/core4x4.html#key-capabilities",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Key capabilities",
+    "text": "Key capabilities\n\nSource adapters for tested eBay and Core 4x4 exports\nAutomatic source detection with a manual selection fallback\nCanonical event ledger with source lineage and occurrence-aware record keys\nApproved SKU mapping from XLSX or CSV files\nExact-file and business-record duplicate handling\nValidation reports with warning and review-needed records\nTransactional SQL Server loading for approved runs\nPurpose-specific SQL analytics views and documented Power BI measures\nProvisional Amazon adapter that remains unvalidated without a representative sample"
+  },
+  {
+    "objectID": "projects/core4x4.html#tools-and-technologies",
+    "href": "projects/core4x4.html#tools-and-technologies",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Tools and technologies",
+    "text": "Tools and technologies\n\nPythonFlaskOpenPyXLSQL ServerSQLPower BIDAXData Validation"
+  },
+  {
+    "objectID": "projects/core4x4.html#business-value",
+    "href": "projects/core4x4.html#business-value",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Business value",
+    "text": "Business value\nThe pipeline provides a consistent foundation for sales analysis by making source differences, lineage, mapping rules, duplicate handling, and validation explicit parts of a repeatable process. Analysts can review file and record outcomes before an approved run is stored for downstream reporting.\nNo quantitative performance or financial claims are included because those outcomes have not been established for publication."
+  },
+  {
+    "objectID": "projects/core4x4.html#what-i-learned",
+    "href": "projects/core4x4.html#what-i-learned",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "What I learned",
+    "text": "What I learned\nThis project reinforced that dependable analytics begins before a dashboard is built. Source context, naming conventions, product identity, and validation rules all shape whether an analytical output can be trusted.\nIt also highlighted the importance of designing workflows in stages. A modular process makes it easier to isolate issues, revise business rules, and communicate how raw information becomes a reporting dataset."
+  },
+  {
+    "objectID": "projects/core4x4.html#future-improvements",
+    "href": "projects/core4x4.html#future-improvements",
+    "title": "Core 4x4 Analytics Data Pipeline",
+    "section": "Future improvements",
+    "text": "Future improvements\nThe repository identifies real-sample Amazon validation, cross-source order reconciliation, and continued operational hardening as future work. Amazon support remains provisional until representative exports pass the same detection, transformation, and validation checks as the tested sources.\n\n← All Projects Next: CedHealth →"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Portfolio\n\n\n\nSelected work spanning business analytics, data engineering, automation, and application development. Each summary is based on the corresponding repository and its source documentation."
+  },
+  {
+    "objectID": "projects.html#core-4x4-analytics-data-pipeline",
+    "href": "projects.html#core-4x4-analytics-data-pipeline",
+    "title": "Projects",
+    "section": "Core 4x4 Analytics Data Pipeline",
+    "text": "Core 4x4 Analytics Data Pipeline\nA local Windows data application that converts marketplace and internal CSV exports into a standardized, traceable event ledger. The workflow separates source-specific parsing from shared validation, approved SKU mapping, duplicate handling, optional SQL Server loading, and Power BI analytics views.\n\nPythonFlaskSQL ServerPower BIData Validation\n\n\nView case study →"
+  },
+  {
+    "objectID": "projects.html#cedhealth",
+    "href": "projects.html#cedhealth",
+    "title": "Projects",
+    "section": "CedHealth",
+    "text": "CedHealth\nA Flask-based health application for managing accounts, goals, meals, workouts, weight entries, favorites, and nutrition lookup. It uses SQLite persistence, Jinja templates, and progressive-web-app support.\n\nPythonFlaskSQLiteJinjaPWA\n\n\nView case study View on GitHub ↗"
+  },
+  {
+    "objectID": "projects.html#aster-desktop-assistant",
+    "href": "projects.html#aster-desktop-assistant",
+    "title": "Projects",
+    "section": "Aster Desktop Assistant",
+    "text": "Aster Desktop Assistant\nA Python desktop assistant organized around an action router, explicit permission handling, environment-backed integrations, local memory, news briefings, watchlists, and shared sessions.\n\nPythonPySide6OpenAI APIAPIsAutomation\n\n\nView case study →"
+  },
+  {
+    "objectID": "projects.html#tower-defense-game",
+    "href": "projects.html#tower-defense-game",
+    "title": "Projects",
+    "section": "Tower Defense Game",
+    "text": "Tower Defense Game\nA browser-based tower-defense game built around a TypeScript game loop. The project includes wave progression, upgrades, achievements, persistent player state, and an installable offline-capable PWA shell.\n\nTypeScriptReactViteTailwind CSSPWA\n\n\nView case study View on GitHub ↗"
+  },
+  {
+    "objectID": "projects.html#looking-for-the-person-behind-the-work",
+    "href": "projects.html#looking-for-the-person-behind-the-work",
+    "title": "Projects",
+    "section": "Looking for the person behind the work?",
+    "text": "Looking for the person behind the work?\nAbout Me View Resume"
+  }
+]
