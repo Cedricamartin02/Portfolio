@@ -95,6 +95,8 @@ A private Python desktop assistant that combines AI responses, permission-aware 
 :::
 :::
 ::::
+
+<p class="section-link">[Explore selected coursework <span aria-hidden="true">→</span>](coursework.qmd)</p>
 :::
 
 ::: {.content-section .focus-section}

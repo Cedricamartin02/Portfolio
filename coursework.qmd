@@ -1,190 +1,89 @@
 ---
 title: "Coursework"
 pagetitle: "Coursework | Cedric Martin"
-description: "Selected CSE 111 and CSE 110 coursework showing progression in Python, data processing, functions, testing, calculations, and structured problem solving."
+description: "Ten selected CSE 111 and CSE 110 projects demonstrating Python, analytics, file processing, functions, testing, and structured program design."
 page-layout: full
 title-block-banner: false
 ---
 
 ::: {.page-hero}
-<p class="eyebrow">Academic work</p>
+<p class="eyebrow">Selected academic work</p>
 
 # Coursework
 
-A compact record of my CSE 111 and CSE 110 work, from introductory control flow to CSV-driven analysis, reusable functions, automated tests, and visual reporting. Major portfolio projects remain separate from these supporting assignments.
+Ten university projects selected for employer-facing value. Together they show progression from control flow and data structures to reusable functions, CSV workflows, analytical calculations, automated tests, and event-driven interfaces.
 :::
 
 ::: {.content-section .coursework-section}
 ::: {.section-intro}
-<p class="eyebrow">CSE 111</p>
+<p class="eyebrow">Top five · Ranked</p>
 
-## Programming with Functions
+## CSE 111 — Programming with Functions
 
-Coursework emphasizing decomposition into functions, structured data, file handling, calculations, testing, exception handling, and graphical interfaces.
+The strongest work from CSE 111, ordered by analytical relevance, completeness, reusable structure, and breadth of technical concepts.
 :::
 
-:::: {.course-grid}
-::: {.course-card .course-card-featured}
-<p class="course-file">stock_analyzer.py · stock_analyzer_test.py</p>
-
+:::: {.course-list}
+::: {.course-detail .course-detail-featured}
+::: {.course-heading}
+<span class="course-rank">01</span>
+<div>
 ### Stock Performance Analyzer
-
-Reads historical Nasdaq CSV records, calculates closing-price statistics, total and daily returns, and volatility, and includes a Plotly HTML-report generator. Six pytest functions exercise the core calculations.
-
-::: {.tag-list}
-<span>Python</span><span>CSV</span><span>Plotly</span><span>pytest</span><span>Financial Analysis</span>
+<p class="project-type">Financial analytics · Python · CSV · Plotly · pytest</p>
+</div>
 :::
+
+#### Purpose
+
+The user supplies a Nasdaq historical-price CSV. The program parses price and volume records, calculates closing-price statistics, total and daily returns, and volatility, then prints a summary and includes an interactive HTML-report generator. It is meaningful because it connects file processing, tested financial calculations, and visual communication in one course project.
+
+#### How it works
+
+CSV rows are converted into a date-keyed dictionary. Separate functions sort dates and calculate each measure; six pytest functions define expected results for the core numeric logic, while Plotly figures support the report layer.
+
+<details class="course-code">
+<summary>View real source excerpt from stock_analyzer.py</summary>
+
+```python
+def calculate_total_return(stock_dict):
+    date_list = []
+    for date in stock_dict:
+        converted_date = dt.datetime.strptime(date,"%m/%d/%Y")
+        date_list.append((converted_date, date))
+    start_date = min(date_list)
+    end_date = max(date_list)
+    start_price = stock_dict[start_date[1]]["close"]
+    end_price = stock_dict[end_date[1]]["close"]
+    total_return = ((end_price - start_price) / start_price) * 100
+    return total_return
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> Dates are converted before comparison, so total return uses the true beginning and end of the period instead of relying on CSV row order.</p>
 
 [View full case study <span aria-hidden="true">→</span>](projects/stock-performance-analyzer.qmd){.card-link}
 :::
 
-::: {.course-card}
-<p class="course-file">receipt.py · products.csv · request.csv · test_products.py</p>
-
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">02</span>
+<div>
 ### Retail Receipt and Product Lookup
-
-Loads a product catalog into a dictionary, processes a separate request file, calculates item counts, subtotal, tax, and total, prints return-date information, and handles missing files, permissions, and unknown product IDs. A pytest file validates catalog loading.
-
-::: {.tag-list}
-<span>CSV</span><span>Dictionaries</span><span>Calculations</span><span>Exceptions</span><span>pytest</span>
-:::
+<p class="project-type">Python · CSV processing · Dictionaries · Error handling · pytest</p>
+</div>
 :::
 
-::: {.course-card}
-<p class="course-file">W5_students.py · students.csv · W5_test_students.py</p>
+#### Purpose
 
-### Student ID CSV Lookup
+The program combines a product catalog with a separate customer request file to produce an itemized retail receipt. It reports quantities, subtotal, sales tax, total, current time, and a return deadline while handling missing files, permission errors, and unknown product IDs.
 
-Builds a dictionary keyed by student I-number and returns the matching student name or a no-match message. Its companion test checks filename handling, dictionary structure, and expected records.
+#### How it works
 
-::: {.tag-list}
-<span>Python</span><span>CSV</span><span>Dictionaries</span><span>pytest</span>
-:::
-:::
+A reusable function loads `products.csv` into a dictionary keyed by product number. The main routine loops through `request.csv`, uses each ID for a dictionary lookup, accumulates quantities and prices, and formats the final receipt; a pytest file validates the catalog-loading function.
 
-::: {.course-card}
-<p class="course-file">w3_water_flow.py · w3_test_water_flow.py</p>
-
-### Water Distribution Calculations
-
-Uses separate functions to model water-column height, pressure gain, pipe and fitting losses, Reynolds number, and pipe-reduction loss. A pytest module defines numeric expectations for all six calculations.
-
-::: {.tag-list}
-<span>Functions</span><span>Engineering Math</span><span>Constants</span><span>pytest</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w4_chemistry.py · w4_formula.py · w4_test_chemistry_1.py</p>
-
-### Molar Mass and Chemistry Calculations
-
-Combines a periodic-table data structure with a course formula parser to calculate molar mass and convert a sample’s grams into moles. A companion test file defines expectations for the periodic-table structure.
-
-::: {.tag-list}
-<span>Dictionaries</span><span>Functions</span><span>Parsing</span><span>Calculations</span><span>pytest</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">gui.py · heart_rate.py · number_entry.py</p>
-
-### Tkinter GUI Exercises
-
-Implements event-driven interfaces for a circle-area calculator and an exercise heart-rate range display. The exercises use labels, validated numeric entry widgets, keyboard events, grid layout, and clear-button callbacks.
-
-::: {.tag-list}
-<span>tkinter</span><span>GUI</span><span>Events</span><span>Input Validation</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w2_sentences.py</p>
-
-### Random Sentence Generator
-
-Composes randomized sentences from determiner, noun, verb, preposition, and prepositional-phrase functions while accounting for grammatical quantity and tense.
-
-::: {.tag-list}
-<span>Functions</span><span>Randomization</span><span>Lists</span><span>String Composition</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w2_can_sizes.py</p>
-
-### Can Size Efficiency Analysis
-
-Defines reusable volume, surface-area, storage-efficiency, and cost-efficiency functions, then compares a supplied collection of can dimensions and costs.
-
-::: {.tag-list}
-<span>Functions</span><span>Geometry</span><span>Efficiency Ratios</span><span>Iteration</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w1_tire_volume.py · volumes.txt</p>
-
-### Tire Volume and File Logging
-
-Calculates tire volume from width, aspect ratio, and wheel diameter, matches several hard-coded inventory sizes, and appends dated measurements—and a phone number when supplied—to a text log.
-
-::: {.tag-list}
-<span>Calculations</span><span>Conditionals</span><span>File I/O</span><span>datetime</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w2_fuel_efficiency.py</p>
-
-### Fuel Efficiency Converter
-
-Separates odometer-based miles-per-gallon and liters-per-100-kilometers calculations into reusable functions with formatted command-line output.
-
-::: {.tag-list}
-<span>Functions</span><span>Unit Conversion</span><span>Calculations</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w3_names.py · w3_address.py · matching test files</p>
-
-### Name and Address String Utilities
-
-Creates and extracts formatted names and parses city, state, and ZIP-code components from structured U.S. addresses. Companion pytest files cover typical and boundary string cases.
-
-::: {.tag-list}
-<span>String Parsing</span><span>Functions</span><span>Slicing</span><span>pytest</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w1_boxes.py · w1_heart_rate.py · w1_discounts.py · w2_cone_volume.py</p>
-
-### Introductory Business and Measurement Calculations
-
-A compact set of programs covering box requirements, exercise heart-rate ranges, weekday retail discounts and sales tax, and right-cone volume.
-
-::: {.tag-list}
-<span>Python</span><span>Formulas</span><span>Conditionals</span><span>Formatting</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">w2_get_initials_functions · w4_pass_args.py · fruit.py</p>
-
-### Function and Collection Practice
-
-Practice files exploring optional function arguments, initials formatting, value-versus-list mutation behavior, and common list operations. The list exercise remains an incomplete working file and is presented as practice rather than a finished program.
-
-::: {.tag-list}
-<span>Functions</span><span>Arguments</span><span>Lists</span><span>Mutation</span>
-:::
-:::
-::::
-
-::: {.coursework-code}
-### Source excerpt: loading product records
+<details class="course-code">
+<summary>View real source excerpt from receipt.py</summary>
 
 ```python
 def read_dictionary(filename,key_column_index):
@@ -199,181 +98,252 @@ def read_dictionary(filename,key_column_index):
     return products_dict
 ```
 
-Reproduced directly from `receipt.py`.
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> A configurable key column turns CSV rows into a reusable lookup dictionary that supports the receipt workflow.</p>
 :::
+
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">03</span>
+<div>
+### Water Distribution Calculations
+<p class="project-type">Python · Functions · Engineering calculations · pytest</p>
+</div>
+:::
+
+#### Purpose
+
+The user supplies water-tower, tank, pipe-length, and fitting inputs. The program estimates pressure at a house after calculating the starting water pressure and subtracting losses from pipes, fittings, and a pipe-size reduction. It is a substantial example of translating a multi-stage quantitative model into reusable functions.
+
+#### How it works
+
+Six focused functions implement the individual formulas, including Reynolds number and pressure loss. `main()` applies constants for the two pipe types and executes the calculations in sequence; a companion pytest module provides approximate numeric expectations for each function.
+
+<details class="course-code">
+<summary>View real source excerpt from w3_water_flow.py</summary>
+
+```python
+def water_column_height(tower_height, tank_height):
+    height = tower_height + (3 * tank_height)/4
+    return height
+
+def pressure_gain_from_water_height(height):
+    pressure = WATER_DENSITY * EARTH_ACCELERATION_OF_GRAVITY * height /1000
+    return pressure
+
+def pressure_loss_from_pipe(pipe_diameter, pipe_length, friction_factor, fluid_velocity):
+    lost_pressure = -friction_factor * pipe_length * WATER_DENSITY * (fluid_velocity**2) / (2000 * pipe_diameter)
+    return lost_pressure
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> A multi-stage engineering model is separated into small calculation functions that can be checked independently.</p>
+:::
+
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">04</span>
+<div>
+### Student ID CSV Lookup
+<p class="project-type">Python · CSV processing · Dictionaries · Testing</p>
+</div>
+:::
+
+#### Purpose
+
+The user enters a student I-number and receives the corresponding name when that identifier exists in the supplied CSV. The assignment demonstrates how a lookup-oriented data structure can replace repeated searching and how file-loading behavior can be tested independently.
+
+#### How it works
+
+`read_dictionary()` skips the CSV header and stores every non-empty record under a configurable key column. `main()` checks the entered I-number against that dictionary, while the companion tests verify file handling, the returned type, and expected records.
+
+<details class="course-code">
+<summary>View real source excerpt from W5_students.py</summary>
+
+```python
+def read_dictionary(filename, key_column_index):
+    students_dict = {}
+    with open(filename, "rt") as csv_file:
+            reader = csv.reader(csv_file)
+            next(reader)
+            for row in reader:
+               if len(row) !=0:
+                   key = row[key_column_index]
+                   students_dict[key] = row
+    return students_dict
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> Structured CSV records are indexed by a meaningful identifier for direct user-driven lookup.</p>
+:::
+
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">05</span>
+<div>
+### Circle Area Tkinter GUI
+<p class="project-type">Python · tkinter · Event handling · Input validation</p>
+</div>
+:::
+
+#### Purpose
+
+The user enters a radius in a desktop form and sees the circle’s area update in the interface. A clear button resets the entry and result. This project adds graphical layout, validation, callbacks, and event-driven behavior to the course’s function-based work.
+
+#### How it works
+
+The program constructs a Tkinter window with labels, a validated integer-entry widget, and a button arranged on a grid. A nested callback reads the radius on each key release, calculates `πr²`, updates the result label, and clears the output when the entry is invalid.
+
+<details class="course-code">
+<summary>View real source excerpt from gui.py</summary>
+
+```python
+    def calculate(event):
+        """Compute and display the user's slowest
+        and fastest beneficial heart rates.
+        """
+        try:
+            # Get the user's age.
+            radius = ent_radius.get()
+
+            # Compute the user's maximum heart rate.
+            area = math.pi * radius**2
+
+            # Display the slowest and fastest benficial
+            # heart rates for the user to see.
+
+
+            lbl_result.config(text=f"{area:.2f}")
+
+        except ValueError:
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> A GUI event callback reads validated input, performs a calculation, updates interface state, and handles incomplete input.</p>
+:::
+::::
 :::
 
 ::: {.content-section .coursework-section}
 ::: {.section-intro}
-<p class="eyebrow">CSE 110</p>
+<p class="eyebrow">Top five · Ranked</p>
 
-## Introduction to Programming
+## CSE 110 — Introduction to Programming
 
-Coursework showing progression through variables, calculations, conditionals, loops, lists, functions, user interaction, and structured-file analysis.
+The strongest CSE 110 projects, ordered by analytical depth, use of structured logic, and completeness relative to the course’s introductory scope.
 :::
 
-:::: {.course-grid}
-::: {.course-card .course-card-featured}
-<p class="course-file">Data_Analysis.py · life-expectancy.csv</p>
-
+:::: {.course-list}
+::: {.course-detail .course-detail-featured}
+::: {.course-heading}
+<span class="course-rank">01</span>
+<div>
 ### Life Expectancy Data Analysis
-
-Explores more than 19,000 country-year records through a menu for overall extrema, year and country filters, group averages, and the largest consecutive recorded decline within a country.
-
-::: {.tag-list}
-<span>Python</span><span>CSV Data</span><span>Filtering</span><span>Aggregation</span><span>Loops</span>
+<p class="project-type">Python · Data analysis · CSV processing · Aggregation</p>
+</div>
 :::
+
+#### Purpose
+
+The user chooses a question about a global life-expectancy CSV containing more than 19,000 country-year records. The program reports overall extremes, summarizes a selected year or country, or identifies the largest consecutive recorded decline within a country. It is the course’s strongest example of turning a large structured file into focused analytical answers.
+
+#### How it works
+
+Each menu branch reads the file, skips its header, splits records into country, code, year, and numeric life-expectancy fields, then filters or aggregates them. Lists support average calculations, while running comparisons track maximums, minimums, and adjacent declines.
+
+<details class="course-code">
+<summary>View real source excerpt from Data_Analysis.py</summary>
+
+```python
+with open("life-expectancy.csv") as life_data:
+    next(life_data)
+    for line in life_data:
+        data_stripped = line.strip().split(",")
+        country = data_stripped[0]
+        code = data_stripped[1]
+        year = data_stripped[2]
+        age = float(data_stripped[3])
+        if year == user_year:
+            count += 1
+            ages.append(age)
+            if age > user_highest_value:
+                user_highest_value = age
+                user_highest_country = country
+                user_highest_year = year
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> One pass through a structured file combines parsing, filtering, numeric conversion, collection building, and running extrema.</p>
 
 [View case study <span aria-hidden="true">→</span>](projects/life-expectancy-analysis.qmd){.card-link}
 :::
 
-::: {.course-card}
-<p class="course-file">shopping_cart.py</p>
-
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">02</span>
+<div>
 ### Shopping Cart
-
-Maintains parallel item and price lists through a menu that supports adding items, displaying numbered contents, removing a selection, and calculating the cart total.
-
-::: {.tag-list}
-<span>Lists</span><span>Loops</span><span>Menu Logic</span><span>Calculations</span>
-:::
+<p class="project-type">Python · Lists · Loops · Menu-driven design</p>
+</div>
 :::
 
-::: {.course-card}
-<p class="course-file">word_puzzle.py</p>
+#### Purpose
 
-### Word Puzzle
+The user manages a command-line shopping cart by adding named items and prices, reviewing numbered contents, removing an item, and requesting the total. The project is meaningful because several state-changing operations share the same in-memory data across a repeated menu.
 
-Implements a limited-attempt word game that validates guess length and distinguishes correct-position letters, present letters, and absent letters through case and placeholder output.
+#### How it works
 
-::: {.tag-list}
-<span>Loops</span><span>Strings</span><span>Indexing</span><span>Conditionals</span>
+Parallel lists keep item names aligned with prices. An outer loop keeps the menu active until quit, nested loops accept multiple additions and display contents, and list indexes connect a user-facing item number to removal and total calculations.
+
+<details class="course-code">
+<summary>View real source excerpt from shopping_cart.py</summary>
+
+```python
+while customer_input != 5:
+    print()
+    customer_input = int(input("What would you like to do? (Type '5' when done) "))
+    print()
+    if customer_input == 1:
+        print("What items would you like to add? (type 'done' when finished adding items)")
+        new_item = input("")
+        print()
+        while new_item != 'done':
+            new_price = float(input("How much does this item cost? "))
+            print()
+            price_list.append(new_price)
+            item_list.append(new_item.capitalize())
+            new_item = input("Another item? ")
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> Nested loops maintain cart state across repeated menu actions while keeping item names aligned with their prices.</p>
 :::
-:::
 
-::: {.course-card}
-<p class="course-file">Adventure_game.py</p>
-
-### Branching Adventure Game
-
-Uses nested choices and normalized text input to move the player through a branching story with multiple victory and failure endings.
-
-::: {.tag-list}
-<span>Conditionals</span><span>Branching Logic</span><span>User Input</span><span>Strings</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">Windchill.py</p>
-
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">03</span>
+<div>
 ### Windchill Calculator
-
-Converts Celsius input to Fahrenheit when needed, defines the windchill formula as a function, and reports calculated values at five-mile-per-hour intervals through 60 mph.
-
-::: {.tag-list}
-<span>Functions</span><span>Unit Conversion</span><span>Loops</span><span>Formulas</span>
-:::
+<p class="project-type">Python · Functions · Unit conversion · Iterative calculations</p>
+</div>
 :::
 
-::: {.course-card}
-<p class="course-file">meal_price_cal.py</p>
+#### Purpose
 
-### Meal Price Calculator
+The user provides a temperature and identifies whether it is Fahrenheit or Celsius. The program converts the value when necessary and reports windchill at five-mile-per-hour increments through 60 mph. It turns a scientific formula into a repeatable comparative output rather than a single calculation.
 
-Collects meal prices and quantities, sales-tax rate, tip, and payment information, then formats a receipt-style summary with subtotal, tax, total, payment, and change fields.
+#### How it works
 
-::: {.tag-list}
-<span>Arithmetic</span><span>User Input</span><span>Currency Formatting</span><span>Output Design</span>
-:::
-:::
+One function normalizes the temperature to Fahrenheit and another encapsulates the windchill equation. A loop increases wind speed by five on each pass and sends the shared temperature and current speed into the calculation function.
 
-::: {.course-card}
-<p class="course-file">function_pratice.py</p>
-
-### Function-Based Area Calculator
-
-Uses separate square, rectangle, and circle functions behind a repeated menu, returning the requested area until the user selects quit.
-
-::: {.tag-list}
-<span>Functions</span><span>Loops</span><span>Geometry</span><span>Menu Logic</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">ID badge generator.py</p>
-
-### Employee ID Badge Generator
-
-Collects identity, contact, job, appearance, start-month, and training fields and formats them into a structured command-line badge.
-
-::: {.tag-list}
-<span>Strings</span><span>Formatting</span><span>User Input</span><span>Layout</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">hr_system.py · hr_system.txt</p>
-
-### HR Record Reader
-
-Reads space-delimited employee records from a text file and extracts the employee name and job field for display.
-
-::: {.tag-list}
-<span>File I/O</span><span>Parsing</span><span>Loops</span><span>Strings</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">guess_my_number.py</p>
-
-### Guess My Number
-
-Generates a random target and repeatedly guides the user with higher-or-lower feedback until the correct number is entered.
-
-::: {.tag-list}
-<span>Loops</span><span>Conditionals</span><span>Random</span><span>User Input</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">Grade_Calculator.py</p>
-
-### Grade Calculator
-
-Maps a numeric percentage to a letter grade with an if/elif chain and reports whether the percentage meets the program’s passing threshold.
-
-::: {.tag-list}
-<span>Conditionals</span><span>Comparisons</span><span>User Input</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">Clever Stories.py</p>
-
-### Clever Stories
-
-Collects words from the user and interpolates them into a formatted Mad Lib-style story, applying capitalization and spacing to the final output.
-
-::: {.tag-list}
-<span>Strings</span><span>Input</span><span>Formatting</span><span>Concatenation</span>
-:::
-:::
-
-::: {.course-card}
-<p class="course-file">Areas.py · Boolean.py · comp_strings.py · files.py · functions.py · if.py · Kannin.py · Libraries.py · Lists_numbers.py · loops.py · Math.py · practice_functions.py · running.py</p>
-
-### Foundational Python Exercises
-
-Short practice files covering arithmetic, library exploration, boolean expressions, conditionals, list iteration, string normalization, file and function syntax, and input validation. They are grouped as learning exercises rather than presented as finished applications.
-
-::: {.tag-list}
-<span>Python Basics</span><span>Control Flow</span><span>Lists</span><span>Functions</span>
-:::
-:::
-::::
-
-::: {.coursework-code}
-### Source excerpt: reusable windchill functions
+<details class="course-code">
+<summary>View real source excerpt from Windchill.py</summary>
 
 ```python
 def conversion(user_choice,temp):
@@ -388,15 +358,111 @@ def windchill(new_temp,wind):
     return windchill
 ```
 
-Reproduced directly from `Windchill.py`.
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> Unit conversion and the windchill formula are isolated as reusable functions rather than embedded in the output loop.</p>
 :::
+
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">04</span>
+<div>
+### Word Puzzle
+<p class="project-type">Python · String analysis · Loops · Conditional logic</p>
+</div>
+:::
+
+#### Purpose
+
+The player has a limited number of attempts to identify a secret word. After each valid-length guess, the program distinguishes letters in the correct position, letters found elsewhere in the word, and absent letters. This creates a compact but meaningful string-comparison algorithm with repeated feedback.
+
+#### How it works
+
+The main loop stops when the answer is correct or the attempt limit is reached. An inner index loop compares every guessed character against the same position in the secret and then against the complete secret, changing case or printing a placeholder to encode the result.
+
+<details class="course-code">
+<summary>View real source excerpt from word_puzzle.py</summary>
+
+```python
+while guess != secret and guesses < max_guesses:
+    print()
+
+    guess = input("What is your guess? ").lower()
+
+    guesses += 1
+
+    print(f"You have {max_guesses - guesses} guesses left. ")
+
+    if len(guess) != len(secret):
+        print("Sorry, the guess must have the same number of letters as the secret word.")
+    else:
+          for i in range(len(guess)):
+            if guess[i] == secret[i]:
+                 print(guess[i].upper(), end=" ")
+            elif guess[i] in secret:
+                 print(guess[i].lower(), end=" ")
+            else:
+                print("_", end=" ")
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> Indexed character comparisons encode three different feedback states inside a bounded guessing loop.</p>
+:::
+
+::: {.course-detail}
+::: {.course-heading}
+<span class="course-rank">05</span>
+<div>
+### Branching Adventure Game
+<p class="project-type">Python · Branching logic · Input normalization · Program flow</p>
+</div>
+:::
+
+#### Purpose
+
+The player enters a character name and makes decisions through a multi-stage narrative. Each choice leads to another scenario or one of several success and failure endings. Its value lies in coordinating a comparatively large branching structure while keeping later choices dependent on earlier decisions.
+
+#### How it works
+
+User responses are normalized with `.lower()` and evaluated through nested `if`, `elif`, and `else` blocks. Each accepted branch prints new context and requests the next decision; fallback branches handle inputs outside the expected choices.
+
+<details class="course-code">
+<summary>View real source excerpt from Adventure_game.py</summary>
+
+```python
+Q1 = input("Do you get UP or go SLEEP? ")
+Q1 = Q1.lower()
+if Q1 == "up":
+    print()
+    print("Sgr Buck: 'Hey bud I know you hit your head real hard but that ain't an excuse to "
+        "be napping on duty! Are you gonna just sit there while we win this or are you gonna join us?'")
+    print()
+    print("*He hands you a rifle*")
+    print()
+    Q2 = input("Do you TAKE it or RUN? ")
+    Q2 = Q2.lower()
+    if Q2 == "take":
+        print()
+        print(f"Sgr Buck: 'Atta boy Private {name.capitalize()}, now lets organize ourselves.'")
+        print("Should we charge em, sit back and snipe em or fall back and regroup?'")
+        print()
+        Q3 = input("Do you CHARGE, SNIPE, or FALL BACK? ")
+        Q3 = Q3.lower()
+```
+
+</details>
+
+<p class="code-takeaway"><strong>What this demonstrates:</strong> Normalized input and nested conditional branches preserve decision context across multiple stages of an interactive program.</p>
+:::
+::::
 :::
 
 ::: {.closing-cta}
-## See how the coursework connects to larger work
+## See the strongest work in context
 
-The featured projects apply these foundations to financial analysis, data engineering, automation, and business-oriented reporting.
+The featured portfolio connects these programming foundations to financial analytics, data engineering, automation, and business intelligence.
 
 [View Featured Projects](projects.qmd){.button .button-primary}
-[Stock Analyzer Case Study](projects/stock-performance-analyzer.qmd){.button .button-secondary}
+[About Me](about.qmd){.button .button-secondary}
 :::

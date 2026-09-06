@@ -93,30 +93,29 @@ A Python desktop assistant organized around an action router, explicit permissio
 ::: {.section-intro}
 <p class="eyebrow">Coursework</p>
 
-## Selected analytical foundations
+## Selected university projects
 
-Focused academic work that demonstrates CSV processing, filtering, calculations, and structured problem solving without presenting every introductory assignment.
+Ten selected CSE 110 and CSE 111 projects showing progression in Python, analytical thinking, CSV processing, reusable functions, testing, calculations, and program design.
 :::
 
 :::: {.project-grid}
 ::: {.project-card}
 ::: {.project-card-body}
 ::: {.project-card-heading}
-<p class="project-type">Coursework · Data analysis</p>
-<span class="repository-status status-public">Course project</span>
+<p class="project-type">Coursework · Python progression</p>
+<span class="repository-status status-public">10 selected projects</span>
 :::
 
-## Life Expectancy Data Analysis
+## CSE 110 & CSE 111 Coursework
 
-A menu-driven Python analysis of a structured global life-expectancy dataset. It summarizes overall extremes, filters records by year or country, calculates averages, and identifies the largest consecutive recorded decline within a country.
+A focused collection of the five strongest projects from each course. Every entry explains its purpose and program logic and includes a folded excerpt copied from the actual source.
 
 ::: {.tag-list}
-<span>Python</span><span>CSV Data</span><span>Filtering</span><span>Descriptive Analysis</span>
+<span>Python</span><span>Data Analysis</span><span>Functions</span><span>Testing</span><span>Program Design</span>
 :::
 
 ::: {.project-links}
-[View case study <span aria-hidden="true">→</span>](projects/life-expectancy-analysis.qmd){.card-link}
-[Browse all coursework <span aria-hidden="true">→</span>](coursework.qmd){.card-link}
+[Explore Coursework <span aria-hidden="true">→</span>](coursework.qmd){.card-link}
 :::
 :::
 :::
