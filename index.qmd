@@ -37,7 +37,7 @@ I build analytical tools and data workflows that turn business information into 
 
 ## Featured projects
 
-Three projects that show how I approach reliable data pipelines, data-backed applications, and practical automation.
+Three projects that show how I approach reliable data pipelines, financial analysis, and data-backed applications.
 :::
 
 :::: {.project-grid .project-grid-home}
@@ -61,6 +61,24 @@ A private, real-business workflow that standardizes marketplace and internal sal
 
 ::: {.project-card}
 ::: {.project-card-body}
+<p class="project-type">Python coursework · Financial analytics</p>
+
+### Stock Performance Analyzer
+
+A course project that analyzes historical Nasdaq CSV data with financial performance measures and includes interactive Plotly reporting for price, volume, returns, and volatility.
+
+::: {.tag-list}
+<span>Python</span><span>CSV Analysis</span><span>Plotly</span><span>pytest</span>
+:::
+
+::: {.project-links}
+[Read case study <span aria-hidden="true">→</span>](projects/stock-performance-analyzer.qmd){.card-link}
+:::
+:::
+:::
+
+::: {.project-card}
+::: {.project-card-body}
 <p class="project-type">Application development · Analytics</p>
 
 ### CedHealth
@@ -73,24 +91,6 @@ A Flask health-tracking application with user accounts, goals, meal and workout 
 
 ::: {.project-links}
 [Read case study <span aria-hidden="true">→</span>](projects/cedhealth.qmd){.card-link}
-:::
-:::
-:::
-
-::: {.project-card}
-::: {.project-card-body}
-<p class="project-type">Automation · AI systems</p>
-
-### Aster Desktop Assistant
-
-A private Python desktop assistant that combines AI responses, permission-aware actions, local state, news and economic information, watchlists, and shared chat sessions.
-
-::: {.tag-list}
-<span>Python</span><span>PySide6</span><span>OpenAI API</span><span>Automation</span>
-:::
-
-::: {.project-links}
-[Read case study <span aria-hidden="true">→</span>](projects/aster-assistant.qmd){.card-link}
 :::
 :::
 :::

@@ -184,7 +184,7 @@ The repository identifies real-sample Amazon validation, cross-source order reco
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}
-[Next: CedHealth →](cedhealth.qmd){.button .button-primary}
+[Next: Stock Performance Analyzer →](stock-performance-analyzer.qmd){.button .button-primary}
 :::
 ::::
 :::::

@@ -1,0 +1,144 @@
+---
+title: "Stock Performance Analyzer"
+pagetitle: "Stock Performance Analyzer | Cedric Martin"
+description: "A Python coursework case study in historical stock-data analysis, financial calculations, Plotly reporting, and pytest validation."
+page-layout: full
+title-block-banner: false
+---
+
+:::: {.case-hero}
+<p class="eyebrow">Course project · Financial analytics</p>
+
+# Stock Performance Analyzer
+
+A Python course project that calculates performance measures from historical Nasdaq CSV data and includes an interactive visual-report generator.
+
+::: {.case-meta}
+::: {.meta-item}
+<span>Context</span>
+University Python coursework
+:::
+::: {.meta-item}
+<span>Input</span>
+Nasdaq historical-data CSV
+:::
+::: {.meta-item}
+<span>Output</span>
+Console summary and HTML report
+:::
+:::
+
+<p class="private-notice">Course repository is not publicly accessible — case study based on the local source.</p>
+::::
+
+::::: {.case-study}
+:::: {.case-sidebar}
+<p class="sidebar-label">On this page</p>
+
+- [Overview](#project-overview)
+- [Goal](#analytical-goal)
+- [Data flow](#data-processing)
+- [Measures](#financial-calculations)
+- [Reporting](#visual-reporting)
+- [Testing](#testing-and-reliability)
+- [Skills](#what-the-project-demonstrates)
+::::
+
+:::: {.case-content}
+## Project overview
+
+Stock Performance Analyzer is a CSE 111 course project built around historical market data downloaded from Nasdaq. The included sample is a Microsoft CSV with date, closing price, volume, opening price, daily high, and daily low fields.
+
+The program reads those records into a date-keyed Python dictionary, calculates a set of descriptive performance measures, prints a concise summary, and includes a standalone interactive HTML report generator built with Plotly.
+
+## Analytical goal
+
+The project makes a multi-year price-history file easier to interpret. It separates data ingestion, calculations, console reporting, and visual reporting into functions so each part of the workflow has a clear responsibility.
+
+It is an educational historical-analysis tool, not investment software and not financial advice.
+
+## Data processing
+
+:::: {.pipeline aria-label="Stock analysis workflow"}
+::: {.pipeline-step}
+<span class="step-number">01</span>
+<strong>Nasdaq CSV</strong>
+<small>Date, price, and volume fields</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">02</span>
+<strong>Parse records</strong>
+<small>Remove currency and thousands separators, then convert types</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">03</span>
+<strong>Calculate measures</strong>
+<small>Price summaries, returns, volume, and volatility</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">04</span>
+<strong>Build report</strong>
+<small>Interactive Plotly charts embedded in HTML</small>
+:::
+::::
+
+The CSV reader converts monetary fields to floating-point values and volume to an integer after stripping formatting characters. Dates remain as source strings in the dictionary and are converted to `datetime` values when chronological ordering is required.
+
+## Financial calculations
+
+The implementation calculates:
+
+- Average, highest, and lowest closing price
+- Start-to-end total return based on chronologically earliest and latest closes
+- Day-over-day returns after sorting records by date
+- Sample standard deviation of daily returns as a volatility measure
+- Trading-day count, average and highest volume, price range, and best and worst daily return for the HTML report
+
+These are descriptive measures of the supplied history; the program does not forecast prices or recommend trades.
+
+## Visual reporting
+
+The report generator creates four Plotly views: closing price over time, daily high/low/close ranges, trading volume, and a histogram of daily returns. Summary cards and explanatory notes accompany the charts, and Plotly is embedded into the generated HTML so the report can be opened locally in a browser.
+
+## Testing and reliability
+
+The repository includes a pytest module with six focused test functions. The tests use small, controlled dictionaries and approximate numeric comparisons to check average close, highest and lowest close, total return, daily returns, and volatility.
+
+This separation between calculation functions and presentation code makes the core financial logic directly testable. The current tests do not cover CSV parsing or HTML report generation, so those remain useful areas for additional validation. The test suite could not be executed in this workspace because Python is not installed here.
+
+The current end-to-end path also contains an older static-chart block that calls `plt` and `mdates` without importing them. Because that block runs before the Plotly report generator, it needs to be removed or repaired before the application can reliably produce its HTML output from `main()`.
+
+## Tools and technologies
+
+::: {.tag-list .tag-list-large}
+<span>Python</span><span>CSV</span><span>Plotly</span><span>pytest</span><span>datetime</span><span>statistics</span><span>HTML</span>
+:::
+
+## What the project demonstrates
+
+- Translating a financial-analysis question into defined calculations
+- Cleaning formatted CSV fields and organizing structured records
+- Handling time order explicitly rather than relying on file order
+- Separating reusable calculations from reporting and visualization
+- Building an interactive output for a non-technical reader
+- Writing unit tests for numeric business logic
+
+## Future improvements
+
+Useful next steps would be repairing or removing the stale static-chart path, adding input validation for missing or malformed rows, and extending tests to the file-reading and report-generation paths.
+
+::: {.case-footer-nav}
+[← All Projects](../projects.qmd){.button .button-secondary}
+[Next: Life Expectancy Analysis →](life-expectancy-analysis.qmd){.button .button-primary}
+:::
+::::
+:::::

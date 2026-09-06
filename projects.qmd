@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 pagetitle: "Projects | Cedric Martin"
-description: "Business analytics, data engineering, automation, and software projects by Cedric Martin."
+description: "Business analytics, data engineering, financial analysis, automation, and software projects by Cedric Martin."
 page-layout: full
 title-block-banner: false
 ---
@@ -11,10 +11,18 @@ title-block-banner: false
 
 # Projects
 
-Selected work spanning business analytics, data engineering, automation, and application development. Each summary is based on the corresponding repository and its source documentation.
+Selected work demonstrating progression in Python, analytics, financial analysis, data quality, and software development. Each summary is grounded in the corresponding source and project documentation.
 :::
 
 ::: {.content-section}
+::: {.section-intro}
+<p class="eyebrow">Analytics & data</p>
+
+## From raw records to decision-ready information
+
+Projects centered on data ingestion, validation, analytical calculations, and reporting.
+:::
+
 :::: {.project-grid}
 ::: {.project-card .project-card-featured}
 ::: {.project-card-body}
@@ -37,6 +45,60 @@ A local Windows data application that converts marketplace and internal CSV expo
 :::
 :::
 
+::: {.project-card .project-card-featured}
+::: {.project-card-body}
+::: {.project-card-heading}
+<p class="project-type">Python coursework · Financial analytics</p>
+<span class="repository-status status-public">Course project</span>
+:::
+
+## Stock Performance Analyzer
+
+A Python program that reads historical Nasdaq stock data from CSV, calculates closing-price and return measures, and includes an interactive Plotly report generator covering price movement, trading volume, daily returns, and volatility.
+
+::: {.tag-list}
+<span>Python</span><span>CSV Analysis</span><span>Plotly</span><span>pytest</span><span>Financial Analysis</span>
+:::
+
+::: {.project-links}
+[View case study <span aria-hidden="true">→</span>](projects/stock-performance-analyzer.qmd){.card-link}
+:::
+:::
+:::
+
+::: {.project-card}
+::: {.project-card-body}
+::: {.project-card-heading}
+<p class="project-type">Coursework · Data analysis</p>
+<span class="repository-status status-public">Course project</span>
+:::
+
+## Life Expectancy Data Analysis
+
+A menu-driven Python analysis of a structured global life-expectancy dataset. It summarizes overall extremes, filters records by year or country, calculates averages, and identifies the largest consecutive recorded decline within a country.
+
+::: {.tag-list}
+<span>Python</span><span>CSV Data</span><span>Filtering</span><span>Descriptive Analysis</span>
+:::
+
+::: {.project-links}
+[View case study <span aria-hidden="true">→</span>](projects/life-expectancy-analysis.qmd){.card-link}
+:::
+:::
+:::
+::::
+:::
+
+::: {.content-section}
+::: {.section-intro}
+<p class="eyebrow">Applications & automation</p>
+
+## Systems built around real workflows
+
+Applications that connect user-facing experiences with persistent data, external services, or structured actions.
+:::
+
+:::: {.project-grid}
 ::: {.project-card}
 ::: {.project-card-body}
 ::: {.project-card-heading}
@@ -79,7 +141,19 @@ A Python desktop assistant organized around an action router, explicit permissio
 :::
 :::
 :::
+::::
+:::
 
+::: {.content-section}
+::: {.section-intro}
+<p class="eyebrow">Software projects</p>
+
+## Supporting technical work
+
+Additional work demonstrating interactive systems, application state, and front-end development.
+:::
+
+:::: {.project-grid}
 ::: {.project-card}
 ::: {.project-card-body}
 ::: {.project-card-heading}
@@ -102,7 +176,6 @@ A browser-based tower-defense game built around a TypeScript game loop. The proj
 :::
 :::
 ::::
-
 :::
 
 ::: {.closing-cta .closing-cta-compact}
@@ -111,4 +184,3 @@ A browser-based tower-defense game built around a TypeScript game loop. The proj
 [About Me](about.qmd){.button .button-secondary}
 [View Resume](resume.qmd){.button .button-primary}
 :::
-

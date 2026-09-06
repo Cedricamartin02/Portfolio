@@ -1,0 +1,130 @@
+---
+title: "Life Expectancy Data Analysis"
+pagetitle: "Life Expectancy Data Analysis | Cedric Martin"
+description: "A Python coursework case study in filtering and summarizing a structured global life-expectancy dataset."
+page-layout: full
+title-block-banner: false
+---
+
+:::: {.case-hero}
+<p class="eyebrow">Course project · Data analysis</p>
+
+# Life Expectancy Data Analysis
+
+A menu-driven Python program for exploring country- and year-level patterns in a structured global life-expectancy dataset.
+
+::: {.case-meta}
+::: {.meta-item}
+<span>Context</span>
+University Python coursework
+:::
+::: {.meta-item}
+<span>Input</span>
+19,000+ CSV records
+:::
+::: {.meta-item}
+<span>Interface</span>
+Command-line menu
+:::
+:::
+
+<p class="private-notice">Course repository is not publicly accessible — case study based on the local source.</p>
+::::
+
+::::: {.case-study}
+:::: {.case-sidebar}
+<p class="sidebar-label">On this page</p>
+
+- [Overview](#project-overview)
+- [Goal](#analytical-goal)
+- [Workflow](#how-it-works)
+- [Analysis](#analytical-capabilities)
+- [Limits](#scope-and-limitations)
+- [Skills](#what-the-project-demonstrates)
+::::
+
+:::: {.case-content}
+## Project overview
+
+Life Expectancy Data Analysis is a CSE 110 course project that reads a CSV containing country, country code, year, and life-expectancy values. The included file contains more than 19,000 records plus a header.
+
+Rather than printing every result at once, the program presents five options: view the dataset, inspect overall extremes, analyze a selected year, analyze a selected country, or find the largest consecutive recorded drop for a country.
+
+## Analytical goal
+
+The project’s goal is to make a large structured file explorable through a simple command-line workflow. It applies filters and descriptive calculations to answer focused questions about levels and changes in life expectancy.
+
+## How it works
+
+:::: {.pipeline aria-label="Life expectancy analysis workflow"}
+::: {.pipeline-step}
+<span class="step-number">01</span>
+<strong>Select a question</strong>
+<small>Overall, year, country, or decline analysis</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">02</span>
+<strong>Read the CSV</strong>
+<small>Skip the header and split each record into fields</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">03</span>
+<strong>Filter and aggregate</strong>
+<small>Collect matching values and update extrema</small>
+:::
+
+<span class="pipeline-arrow" aria-hidden="true">→</span>
+
+::: {.pipeline-step}
+<span class="step-number">04</span>
+<strong>Summarize</strong>
+<small>Print averages, highs, lows, or the largest drop</small>
+:::
+::::
+
+## Analytical capabilities
+
+- Displays the structured dataset as country, code, year, and life expectancy
+- Finds the lowest and highest life-expectancy values across all records and reports their countries and years
+- Filters by a user-entered year and reports the average, lowest, and highest values for that year
+- Filters by an exact country name and reports its average, lowest, and highest recorded values
+- Compares adjacent records for the same country to identify the largest decline in the file’s existing order
+- Reports when no records match the requested year or country
+
+## Scope and limitations
+
+The analysis is intentionally lightweight. It uses direct string splitting rather than Python’s CSV module, requires an exact country-name match, and repeats the file-reading logic for each menu choice. The decline calculation also depends on records being grouped by country and ordered consistently in the source file.
+
+The repository does not include automated tests or visualizations for this project, so the case study does not claim them.
+
+## Tools and technologies
+
+::: {.tag-list .tag-list-large}
+<span>Python</span><span>CSV Data</span><span>Filtering</span><span>Aggregation</span><span>Descriptive Statistics</span>
+:::
+
+## What the project demonstrates
+
+- Reading and interpreting a large structured dataset
+- Translating user questions into filters and aggregations
+- Tracking extrema while iterating through records
+- Calculating group-specific averages
+- Presenting analytical results through a simple interaction flow
+- Recognizing data-order and input-validation assumptions
+
+## Future improvements
+
+The strongest next steps would be extracting reusable functions, using the standard CSV module, normalizing country input, sorting explicitly before change analysis, and adding tests for filters, extrema, missing matches, and year-over-year calculations.
+
+::: {.case-footer-nav}
+[← All Projects](../projects.qmd){.button .button-secondary}
+[Next: CedHealth →](cedhealth.qmd){.button .button-primary}
+:::
+::::
+:::::
