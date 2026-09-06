@@ -124,7 +124,7 @@ The repository does not include a project test suite or a formal migration frame
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}
-[Next: Aster Assistant →](aster-assistant.qmd){.button .button-primary}
+[Next: Tower Defense Game →](tower-defense.qmd){.button .button-primary}
 :::
 ::::
 :::::

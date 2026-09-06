@@ -124,7 +124,7 @@ The repository does not yet include a README or automated test suite. Useful nex
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}
-[Next: Tower Defense Game →](tower-defense.qmd){.button .button-primary}
+[Next: Life Expectancy Analysis →](life-expectancy-analysis.qmd){.button .button-primary}
 :::
 ::::
 :::::

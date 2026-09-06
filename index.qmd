@@ -37,7 +37,7 @@ I build analytical tools and data workflows that turn business information into 
 
 ## Featured projects
 
-Three projects that show how I approach reliable data pipelines, financial analysis, and data-backed applications.
+Three projects that show how I approach reliable data pipelines, financial analysis, and practical automation.
 :::
 
 :::: {.project-grid .project-grid-home}
@@ -61,7 +61,7 @@ A private, real-business workflow that standardizes marketplace and internal sal
 
 ::: {.project-card}
 ::: {.project-card-body}
-<p class="project-type">Python coursework · Financial analytics</p>
+<p class="project-type">Financial analytics · Python</p>
 
 ### Stock Performance Analyzer
 
@@ -79,18 +79,18 @@ A course project that analyzes historical Nasdaq CSV data with financial perform
 
 ::: {.project-card}
 ::: {.project-card-body}
-<p class="project-type">Application development · Analytics</p>
+<p class="project-type">Automation · AI systems</p>
 
-### CedHealth
+### Aster Desktop Assistant
 
-A Flask health-tracking application with user accounts, goals, meal and workout logging, nutrition lookup, SQLite persistence, and an installable PWA experience.
+A private Python desktop assistant that combines AI responses, permission-aware actions, local state, news and economic information, watchlists, and shared chat sessions.
 
 ::: {.tag-list}
-<span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span>
+<span>Python</span><span>PySide6</span><span>OpenAI API</span><span>Automation</span>
 :::
 
 ::: {.project-links}
-[Read case study <span aria-hidden="true">→</span>](projects/cedhealth.qmd){.card-link}
+[Read case study <span aria-hidden="true">→</span>](projects/aster-assistant.qmd){.card-link}
 :::
 :::
 :::

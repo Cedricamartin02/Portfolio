@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 pagetitle: "Projects | Cedric Martin"
-description: "Business analytics, data engineering, financial analysis, automation, and software projects by Cedric Martin."
+description: "Business analytics, financial analytics, data engineering, automation, and supporting software projects by Cedric Martin."
 page-layout: full
 title-block-banner: false
 ---
@@ -11,16 +11,16 @@ title-block-banner: false
 
 # Projects
 
-Selected work demonstrating progression in Python, analytics, financial analysis, data quality, and software development. Each summary is grounded in the corresponding source and project documentation.
+Selected work focused on business analytics, financial analysis, data engineering, automation, and business intelligence, with coursework and software projects providing supporting technical depth.
 :::
 
 ::: {.content-section}
 ::: {.section-intro}
-<p class="eyebrow">Analytics & data</p>
+<p class="eyebrow">Featured projects</p>
 
-## From raw records to decision-ready information
+## Analytics and automation in practice
 
-Projects centered on data ingestion, validation, analytical calculations, and reporting.
+The strongest examples of how I structure data, develop analytical outputs, and build practical systems around business information.
 :::
 
 :::: {.project-grid}
@@ -45,10 +45,10 @@ A local Windows data application that converts marketplace and internal CSV expo
 :::
 :::
 
-::: {.project-card .project-card-featured}
+::: {.project-card}
 ::: {.project-card-body}
 ::: {.project-card-heading}
-<p class="project-type">Python coursework · Financial analytics</p>
+<p class="project-type">Financial analytics · Python</p>
 <span class="repository-status status-public">Course project</span>
 :::
 
@@ -62,61 +62,6 @@ A Python program that reads historical Nasdaq stock data from CSV, calculates cl
 
 ::: {.project-links}
 [View case study <span aria-hidden="true">→</span>](projects/stock-performance-analyzer.qmd){.card-link}
-:::
-:::
-:::
-
-::: {.project-card}
-::: {.project-card-body}
-::: {.project-card-heading}
-<p class="project-type">Coursework · Data analysis</p>
-<span class="repository-status status-public">Course project</span>
-:::
-
-## Life Expectancy Data Analysis
-
-A menu-driven Python analysis of a structured global life-expectancy dataset. It summarizes overall extremes, filters records by year or country, calculates averages, and identifies the largest consecutive recorded decline within a country.
-
-::: {.tag-list}
-<span>Python</span><span>CSV Data</span><span>Filtering</span><span>Descriptive Analysis</span>
-:::
-
-::: {.project-links}
-[View case study <span aria-hidden="true">→</span>](projects/life-expectancy-analysis.qmd){.card-link}
-:::
-:::
-:::
-::::
-:::
-
-::: {.content-section}
-::: {.section-intro}
-<p class="eyebrow">Applications & automation</p>
-
-## Systems built around real workflows
-
-Applications that connect user-facing experiences with persistent data, external services, or structured actions.
-:::
-
-:::: {.project-grid}
-::: {.project-card}
-::: {.project-card-body}
-::: {.project-card-heading}
-<p class="project-type">Data-backed application · Analytics</p>
-<span class="repository-status status-public">Public repository</span>
-:::
-
-## CedHealth
-
-A Flask-based health application for managing accounts, goals, meals, workouts, weight entries, favorites, and nutrition lookup. It uses SQLite persistence, Jinja templates, and progressive-web-app support.
-
-::: {.tag-list}
-<span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span><span>PWA</span>
-:::
-
-::: {.project-links}
-[View case study](projects/cedhealth.qmd){.card-link}
-[View on GitHub <span aria-hidden="true">↗</span>](https://github.com/Cedricamartin02/CedHealth){.card-link .external-project-link}
 :::
 :::
 :::
@@ -146,14 +91,69 @@ A Python desktop assistant organized around an action router, explicit permissio
 
 ::: {.content-section}
 ::: {.section-intro}
-<p class="eyebrow">Software projects</p>
+<p class="eyebrow">Coursework</p>
 
-## Supporting technical work
+## Selected analytical foundations
 
-Additional work demonstrating interactive systems, application state, and front-end development.
+Focused academic work that demonstrates CSV processing, filtering, calculations, and structured problem solving without presenting every introductory assignment.
 :::
 
 :::: {.project-grid}
+::: {.project-card}
+::: {.project-card-body}
+::: {.project-card-heading}
+<p class="project-type">Coursework · Data analysis</p>
+<span class="repository-status status-public">Course project</span>
+:::
+
+## Life Expectancy Data Analysis
+
+A menu-driven Python analysis of a structured global life-expectancy dataset. It summarizes overall extremes, filters records by year or country, calculates averages, and identifies the largest consecutive recorded decline within a country.
+
+::: {.tag-list}
+<span>Python</span><span>CSV Data</span><span>Filtering</span><span>Descriptive Analysis</span>
+:::
+
+::: {.project-links}
+[View case study <span aria-hidden="true">→</span>](projects/life-expectancy-analysis.qmd){.card-link}
+:::
+:::
+:::
+::::
+:::
+
+::: {.content-section}
+::: {.section-intro}
+<p class="eyebrow">Side projects</p>
+
+## Supporting software work
+
+Independent applications that demonstrate data-backed workflows, interactive systems, and broader software-development capability.
+:::
+
+:::: {.project-grid}
+::: {.project-card}
+::: {.project-card-body}
+::: {.project-card-heading}
+<p class="project-type">Data-backed application · Analytics</p>
+<span class="repository-status status-public">Public repository</span>
+:::
+
+## CedHealth
+
+A Flask-based health application for managing accounts, goals, meals, workouts, weight entries, favorites, and nutrition lookup. It uses SQLite persistence, Jinja templates, and progressive-web-app support.
+
+::: {.tag-list}
+<span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span><span>PWA</span>
+:::
+
+::: {.project-links}
+[View case study](projects/cedhealth.qmd){.card-link}
+[View on GitHub <span aria-hidden="true">↗</span>](https://github.com/Cedricamartin02/CedHealth){.card-link .external-project-link}
+:::
+:::
+:::
+
 ::: {.project-card}
 ::: {.project-card-body}
 ::: {.project-card-heading}
