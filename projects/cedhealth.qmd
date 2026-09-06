@@ -7,7 +7,7 @@ title-block-banner: false
 ---
 
 :::: {.case-hero}
-<p class="eyebrow">Case study · Application development & analytics</p>
+<p class="eyebrow">Case study · Data-backed application</p>
 
 # CedHealth
 
@@ -49,7 +49,7 @@ SQLite
 :::: {.case-content}
 ## Project overview
 
-CedHealth is a public health-tracking application built with Python and Flask. Its repository contains a server application, SQLite data access, Jinja templates, a web manifest, a service worker, and deployment configuration for Render.
+CedHealth is a public health-tracking application built with Python and Flask. Its repository contains a server application, SQLite data access, Jinja templates, a web manifest, a service worker, and a Gunicorn production entry point.
 
 The application organizes several related health workflows behind user accounts instead of treating meals, goals, and workouts as disconnected tools.
 
@@ -106,7 +106,7 @@ It also includes a web app manifest and service worker so the Flask application 
 - Nutrition search and meal-analysis endpoints
 - SQLite-backed persistence
 - PWA manifest and service-worker support
-- Render deployment configuration documented in the repository
+- Gunicorn production entry point configured through a Procfile
 
 ## Technologies
 
@@ -120,7 +120,7 @@ CedHealth demonstrates how a data-backed application grows beyond individual scr
 
 ## Future improvements
 
-Potential next steps include expanding automated tests, formalizing database migrations, consolidating dependency management, and continuing accessibility and responsive-interface review.
+The repository does not include a project test suite or a formal migration framework. Useful next steps would be adding route and data-layer tests, formalizing schema migrations, consolidating dependency management, and continuing accessibility review.
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}

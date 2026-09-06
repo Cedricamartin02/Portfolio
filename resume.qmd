@@ -11,7 +11,7 @@ title-block-banner: false
 
 # Resume
 
-A concise overview of my education, experience, technical skills, and analytics work.
+This page will provide a downloadable summary of my education, technical skills, and project work.
 :::
 
 ::: {.narrow-section}
@@ -21,9 +21,9 @@ A concise overview of my education, experience, technical skills, and analytics 
 :::
 
 ::: {.resume-copy}
-## Resume PDF coming soon
+## Resume PDF not yet available
 
-The downloadable resume will be added here once the final PDF is ready. This placeholder intentionally does not link to a sample or fabricated document.
+The repository does not currently include a resume PDF. This placeholder intentionally avoids linking to a sample or unfinished document.
 
 **To publish it later:** add the file as `assets/Cedric-Martin-Resume.pdf`, then replace this note with a view/download button.
 :::

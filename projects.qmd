@@ -23,9 +23,9 @@ Selected work spanning business analytics, data engineering, automation, and app
 <span class="repository-status status-private">Private repository</span>
 :::
 
-## Core 4x4 Analytics Pipeline
+## Core 4x4 Analytics Data Pipeline
 
-A local Windows data application that converts marketplace and internal CSV exports into a standardized, traceable event ledger. The workflow supports validation reporting, approved SKU mapping, duplicate handling, optional SQL Server loading, and Power BI analytics views.
+A local Windows data application that converts marketplace and internal CSV exports into a standardized, traceable event ledger. The workflow separates source-specific parsing from shared validation, approved SKU mapping, duplicate handling, optional SQL Server loading, and Power BI analytics views.
 
 ::: {.tag-list}
 <span>Python</span><span>Flask</span><span>SQL Server</span><span>Power BI</span><span>Data Validation</span>
@@ -40,13 +40,13 @@ A local Windows data application that converts marketplace and internal CSV expo
 ::: {.project-card}
 ::: {.project-card-body}
 ::: {.project-card-heading}
-<p class="project-type">Application development · Analytics</p>
+<p class="project-type">Data-backed application · Analytics</p>
 <span class="repository-status status-public">Public repository</span>
 :::
 
 ## CedHealth
 
-A Flask-based health application for managing accounts, goals, meals, workouts, weight entries, favorites, and nutrition-oriented analysis. It uses SQLite persistence, Jinja templates, and progressive-web-app support.
+A Flask-based health application for managing accounts, goals, meals, workouts, weight entries, favorites, and nutrition lookup. It uses SQLite persistence, Jinja templates, and progressive-web-app support.
 
 ::: {.tag-list}
 <span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span><span>PWA</span>
@@ -87,9 +87,9 @@ A Python desktop assistant organized around an action router, explicit permissio
 <span class="repository-status status-public">Public repository</span>
 :::
 
-## TowerDefend
+## Tower Defense Game
 
-A browser-based tower-defense game built around a TypeScript game loop. The project includes wave progression, upgrades, achievements, persistent player state, responsive controls, and an installable offline-capable PWA shell.
+A browser-based tower-defense game built around a TypeScript game loop. The project includes wave progression, upgrades, achievements, persistent player state, and an installable offline-capable PWA shell.
 
 ::: {.tag-list}
 <span>TypeScript</span><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>PWA</span>
@@ -103,11 +103,6 @@ A browser-based tower-defense game built around a TypeScript game loop. The proj
 :::
 ::::
 
-::: {.repository-note}
-### Repository context
-
-The private `OCS` and `OCS2` repositories contain the same tracked Core 4x4 project tree and are represented by the single Core 4x4 case study above. The separate private `FitnessApp` repository is currently empty, so it is not presented as a finished portfolio project.
-:::
 :::
 
 ::: {.closing-cta .closing-cta-compact}

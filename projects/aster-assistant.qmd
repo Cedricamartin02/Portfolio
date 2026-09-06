@@ -57,7 +57,7 @@ The project explores how a desktop assistant can support more than open-ended co
 
 ## What I built
 
-The application includes a PySide6 interface, an OpenAI-backed response layer, a structured action router, a permission manager, environment-based integration configuration, and local stores for memory, learning concepts, and watchlist items.
+The application includes a PySide6 interface, an OpenAI-backed response layer, a structured action router, a permission manager, environment-based integration configuration, and local stores for saved state, learning concepts, and watchlist items.
 
 The source also includes economic and company dashboard workflows, categorized news briefings, voice-related dependencies, Excel workbook actions, and host/client shared chat sessions.
 
@@ -104,7 +104,7 @@ The source also includes economic and company dashboard workflows, categorized n
 - Environment-backed API configuration
 - News briefings assembled from external information services
 - Company, market, and economic dashboard workflows
-- Persistent local watchlists, memory, and learning concepts
+- Persistent local watchlists, saved state, and learning concepts
 - Shared host/client chat sessions over a local connection
 - Excel workbook support through OpenPyXL
 
@@ -120,11 +120,11 @@ The project brings together user-interface state, external services, asynchronou
 
 ## Future improvements
 
-The repository does not yet include a public README or automated test suite. Useful next steps would be documenting supported workflows, adding focused tests around routing and permissions, and formalizing error handling for optional external integrations.
+The repository does not yet include a README or automated test suite. Useful next steps would be documenting supported workflows, adding focused tests around routing and permissions, and formalizing error handling for optional external integrations.
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}
-[Next: TowerDefend →](tower-defense.qmd){.button .button-primary}
+[Next: Tower Defense Game →](tower-defense.qmd){.button .button-primary}
 :::
 ::::
 :::::

@@ -1,7 +1,7 @@
 ---
-title: "Core 4x4 Analytics Pipeline"
-pagetitle: "Core 4x4 Analytics Pipeline | Cedric Martin"
-description: "A business analytics case study covering a multi-source sales-data application built with Python, Flask, SQL Server, and Power BI."
+title: "Core 4x4 Analytics Data Pipeline"
+pagetitle: "Core 4x4 Analytics Data Pipeline | Cedric Martin"
+description: "A business analytics case study covering a traceable multi-source sales-data pipeline built with Python, Flask, SQL Server, and Power BI."
 page-layout: full
 title-block-banner: false
 ---
@@ -9,7 +9,7 @@ title-block-banner: false
 :::: {.case-hero}
 <p class="eyebrow">Case study · Business analytics</p>
 
-# Core 4x4 Analytics Pipeline
+# Core 4x4 Analytics Data Pipeline
 
 A local Windows application for turning marketplace and internal sales exports into a standardized, traceable event ledger for review and downstream analysis.
 
@@ -37,10 +37,12 @@ Real business sales data
 
 - [Summary](#project-summary)
 - [Business problem](#business-problem)
-- [My role](#my-role)
-- [Solution](#solution)
+- [My approach](#my-approach)
+- [Architecture](#architecture)
 - [Workflow](#data-workflow)
-- [Challenges](#key-challenges)
+- [Technical decisions](#key-technical-decisions)
+- [Data quality](#data-quality-and-validation)
+- [Tools](#tools-and-technologies)
 - [Business value](#business-value)
 - [Learnings](#what-i-learned)
 ::::
@@ -48,7 +50,7 @@ Real business sales data
 :::: {.case-content}
 ## Project summary
 
-Core 4x4 is a real-world business analytics project centered on marketplace and internal sales data arriving in different export formats. The repository implements a local Windows application that turns those inputs into a standardized, traceable event ledger.
+Core 4x4 is a real-business analytics project centered on marketplace and internal sales data arriving in different export formats. The repository implements a local Windows application that turns those inputs into a standardized, traceable event ledger.
 
 The workflow supports file-type detection, product and SKU mapping, exact-file and business-record duplicate handling, validation reports, optional SQL Server loading, and analytics views for Power BI. Proprietary records and business details are intentionally excluded from this public case study.
 
@@ -58,15 +60,15 @@ Sales information from separate platforms can differ in structure, naming conven
 
 The project addresses the need for a shared analytical foundation: one that preserves the useful information in each source while applying common business rules before analysis.
 
-## My role
+## My approach
 
-I worked across the data-preparation workflow, including reviewing source structures, shaping Python transformation logic, standardizing fields, supporting product and SKU mapping, handling duplicate records, defining validation behavior, and preparing SQL and Power BI assets.
+I approached the project as a data reliability problem rather than a simple file-conversion task. I reviewed source structures, built Python transformation and identity logic, defined validation behavior, implemented approved product and SKU mapping, and prepared SQL and Power BI assets around the resulting event ledger.
 
-I also used Git and GitHub to manage and track the project code. Specific organizational details and proprietary data are intentionally omitted.
+Specific organizational details, credentials, and proprietary records are intentionally omitted.
 
-## Solution
+## Architecture
 
-The solution organizes the work into source adapters, a canonical event schema, shared validation and mapping rules, and controlled output steps. Users can process files through a local desktop or browser interface, review warnings, save a standardized CSV and validation report, and optionally load approved results into SQL Server for Power BI.
+The application separates source adapters, a canonical event schema, shared validation and mapping rules, batch orchestration, and controlled delivery steps. Users can process files through a local desktop or browser interface, review warnings, save a standardized CSV and validation report, and optionally load an approved result into SQL Server for Power BI.
 
 ::: {.solution-callout}
 ### Design principle
@@ -80,7 +82,7 @@ Separate source-specific cleanup from shared business rules. This makes the work
 ::: {.pipeline-step}
 <span class="step-number">01</span>
 <strong>Source files</strong>
-<small>eBay, Core 4x4, Amazon-format, and SKU mapping files</small>
+<small>Tested eBay and Core 4x4 exports, plus approved SKU mappings</small>
 :::
 
 <span class="pipeline-arrow" aria-hidden="true">→</span>
@@ -95,8 +97,8 @@ Separate source-specific cleanup from shared business rules. This makes the work
 
 ::: {.pipeline-step}
 <span class="step-number">03</span>
-<strong>Map & reconcile</strong>
-<small>Apply product and SKU mapping</small>
+<strong>Map products</strong>
+<small>Apply approved SKU mappings without changing source identifiers</small>
 :::
 
 <span class="pipeline-arrow" aria-hidden="true">→</span>
@@ -104,7 +106,7 @@ Separate source-specific cleanup from shared business rules. This makes the work
 ::: {.pipeline-step}
 <span class="step-number">04</span>
 <strong>Deduplicate</strong>
-<small>Identify and handle repeated records</small>
+<small>Separate exact file copies from repeated business records</small>
 :::
 
 <span class="pipeline-arrow" aria-hidden="true">→</span>
@@ -116,43 +118,49 @@ Separate source-specific cleanup from shared business rules. This makes the work
 :::
 ::::
 
-## Key challenges
+## Key technical decisions
 
 :::: {.challenge-grid}
 ::: {.challenge-card}
-### Inconsistent source formats
-Each source can represent similar business information differently. The workflow needs to preserve meaning while creating a consistent structure.
+### Preserve event meaning
+The canonical schema keeps `record_type` separate from row grain so order lines and standalone financial events—such as fees, payouts, holds, and refunds—are not forced into the same meaning.
 :::
 
 ::: {.challenge-card}
-### Product identity
-Product names and SKUs may not align cleanly across inputs. Mapping creates a common reference for downstream analysis.
+### Separate identity levels
+The pipeline uses a file hash for exact uploaded bytes and a business `record_key` for cross-file deduplication. Those identifiers answer different questions and remain separate.
 :::
 
 ::: {.challenge-card}
-### Duplicate records
-Potential duplicates require explicit handling so that combined files do not quietly distort later reporting.
+### Keep legitimate repeats
+Rows with the same logical identity receive occurrence-aware record keys in source order. Repeated real events remain distinct, while a harmlessly resaved report reproduces the same sequence of keys.
 :::
 
 ::: {.challenge-card}
-### Data validation
-Transformations need checks that surface unexpected values or structural issues before the data reaches Power BI.
+### Control mapping
+Only explicitly approved SKU mappings populate the standardized SKU. Suggested, missing, or conflicting mappings remain visible for review instead of being silently accepted.
 :::
 ::::
 
-## Key features
+## Data quality and validation
+
+Source detection uses report-column signatures rather than filenames. Unsupported or uncertain files require manual source selection, and questionable rows are preserved with either `warning` or `review_needed` status instead of being silently discarded.
+
+The output retains provenance fields for the import run, source file, system, report, row number, and adapter version. Automated tests cover schema consistency, long text identifiers, duplicate files, cross-file business duplicates, occurrence-aware record identity, approved mapping behavior, SQL contracts, and Power BI assets. Database integration tests are available separately when SQL Server is configured.
+
+## Key capabilities
 
 - Source adapters for tested eBay and Core 4x4 exports
-- Amazon-format adapter present but not yet validated with a real sample
 - Automatic source detection with a manual selection fallback
-- Canonical event ledger with source lineage and stable record keys
+- Canonical event ledger with source lineage and occurrence-aware record keys
 - Approved SKU mapping from XLSX or CSV files
 - Exact-file and business-record duplicate handling
 - Validation reports with warning and review-needed records
 - Transactional SQL Server loading for approved runs
-- SQL analytics views, Power BI measures, and automated tests
+- Purpose-specific SQL analytics views and documented Power BI measures
+- Provisional Amazon adapter that remains unvalidated without a representative sample
 
-## Technologies
+## Tools and technologies
 
 ::: {.tag-list .tag-list-large}
 <span>Python</span><span>Flask</span><span>OpenPyXL</span><span>SQL Server</span><span>SQL</span><span>Power BI</span><span>DAX</span><span>Data Validation</span>
@@ -160,7 +168,7 @@ Transformations need checks that surface unexpected values or structural issues 
 
 ## Business value
 
-The pipeline provides a more consistent foundation for sales analysis by making source differences, lineage, mapping rules, duplicate handling, and validation part of a repeatable process. The output can be reviewed as files before approved runs are stored for downstream reporting.
+The pipeline provides a consistent foundation for sales analysis by making source differences, lineage, mapping rules, duplicate handling, and validation explicit parts of a repeatable process. Analysts can review file and record outcomes before an approved run is stored for downstream reporting.
 
 No quantitative performance or financial claims are included because those outcomes have not been established for publication.
 
@@ -172,7 +180,7 @@ It also highlighted the importance of designing workflows in stages. A modular p
 
 ## Future improvements
 
-The repository identifies Amazon sample validation and continued operational hardening as areas for future work. Additional improvements could extend automated quality checks and make the approved-load and Power BI refresh process easier to operate.
+The repository identifies real-sample Amazon validation, cross-source order reconciliation, and continued operational hardening as future work. Amazon support remains provisional until representative exports pass the same detection, transformation, and validation checks as the tested sources.
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}

@@ -37,7 +37,7 @@ I build analytical tools and data workflows that turn business information into 
 
 ## Featured projects
 
-Three projects that show how I approach data quality, analytical applications, automation, and practical business systems.
+Three projects that show how I approach reliable data pipelines, data-backed applications, and practical automation.
 :::
 
 :::: {.project-grid .project-grid-home}
@@ -45,9 +45,9 @@ Three projects that show how I approach data quality, analytical applications, a
 ::: {.project-card-body}
 <p class="project-type">Business analytics · Data engineering</p>
 
-### Core 4x4 Analytics Pipeline
+### Core 4x4 Analytics Data Pipeline
 
-A private, real-business workflow that standardizes marketplace and internal sales exports, applies mapping and duplicate rules, validates results, and prepares approved data for SQL Server and Power BI.
+A private, real-business workflow that standardizes marketplace and internal sales exports, preserves record lineage, applies approved mapping and duplicate rules, and prepares reviewed data for SQL Server and Power BI.
 
 ::: {.tag-list}
 <span>Python</span><span>Flask</span><span>SQL Server</span><span>Power BI</span>
@@ -65,7 +65,7 @@ A private, real-business workflow that standardizes marketplace and internal sal
 
 ### CedHealth
 
-A Flask health-tracking application with accounts, goals, meal and workout tracking, nutrition analysis, SQLite persistence, and an installable PWA experience.
+A Flask health-tracking application with user accounts, goals, meal and workout logging, nutrition lookup, SQLite persistence, and an installable PWA experience.
 
 ::: {.tag-list}
 <span>Python</span><span>Flask</span><span>SQLite</span><span>Jinja</span>
@@ -83,7 +83,7 @@ A Flask health-tracking application with accounts, goals, meal and workout track
 
 ### Aster Desktop Assistant
 
-A private Python desktop assistant that combines AI responses, permission-aware actions, local state, watchlists, market and economic information, and shared chat sessions.
+A private Python desktop assistant that combines AI responses, permission-aware actions, local state, news and economic information, watchlists, and shared chat sessions.
 
 ::: {.tag-list}
 <span>Python</span><span>PySide6</span><span>OpenAI API</span><span>Automation</span>

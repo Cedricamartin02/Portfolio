@@ -1,6 +1,6 @@
 ---
-title: "TowerDefend"
-pagetitle: "TowerDefend | Cedric Martin"
+title: "Tower Defense Game"
+pagetitle: "Tower Defense Game | Cedric Martin"
 description: "A case study of a browser-based TypeScript and React tower-defense game delivered as a progressive web app."
 page-layout: full
 title-block-banner: false
@@ -9,7 +9,7 @@ title-block-banner: false
 :::: {.case-hero}
 <p class="eyebrow">Case study · Interactive software development</p>
 
-# TowerDefend
+# Tower Defense Game
 
 A browser-based tower-defense experience built around a TypeScript game loop and delivered as an installable progressive web app.
 
@@ -49,7 +49,7 @@ Interactive systems
 :::: {.case-content}
 ## Project overview
 
-TowerDefend is a public React and TypeScript project with a dedicated game-engine layer and a component-based interface. Its repository includes game entities, state and rendering modules, achievement and upgrade systems, audio and visual assets, an Express production entry point, and progressive-web-app configuration.
+The repository names the application TowerDefend. It is a public React and TypeScript project with a dedicated game-engine layer and a component-based interface. Its source includes game entities, state and rendering modules, achievement and upgrade systems, an Express production entry point, and progressive-web-app configuration.
 
 ## Problem / goal
 
@@ -63,7 +63,7 @@ The Vite PWA configuration adds an install prompt and offline app-shell caching.
 
 ## How it works
 
-:::: {.pipeline aria-label="TowerDefend application architecture"}
+:::: {.pipeline aria-label="Tower Defense Game application architecture"}
 ::: {.pipeline-step}
 <span class="step-number">01</span>
 <strong>React interface</strong>
@@ -102,23 +102,23 @@ The Vite PWA configuration adds an install prompt and offline app-shell caching.
 - Upgrade, skill, achievement, and player-stat systems
 - Persistent browser storage for player progress
 - Responsive React interface and reusable UI components
-- Audio, texture, geometry, and icon assets
+- Audio, texture, and icon assets
 - Installable PWA shell with offline caching
 - Vite build process and Express production entry point
 
 ## Technologies
 
 ::: {.tag-list .tag-list-large}
-<span>TypeScript</span><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>Three.js / R3F</span><span>Express</span><span>PWA</span>
+<span>TypeScript</span><span>React</span><span>Vite</span><span>Tailwind CSS</span><span>Express</span><span>PWA</span>
 :::
 
 ## What I learned
 
-TowerDefend demonstrates how real-time state differs from conventional page state. Game mechanics, rendering, progression, and interface feedback need clear boundaries while still responding to the same event loop and persistent player model.
+The project demonstrates how real-time state differs from conventional page state. Game mechanics, rendering, progression, and interface feedback need clear boundaries while still responding to the same event loop and persistent player model.
 
 ## Future improvements
 
-The repository marks the live demo as forthcoming. Additional next steps could include automated tests for progression rules, performance profiling across devices, and publishing the prepared production build.
+The repository does not include automated tests and marks the live demo as forthcoming. Useful next steps would be testing progression rules, profiling performance across devices, and publishing the prepared production build.
 
 ::: {.case-footer-nav}
 [← All Projects](../projects.qmd){.button .button-secondary}

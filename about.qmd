@@ -11,7 +11,7 @@ title-block-banner: false
 
 # Curious about the business. Careful with the data.
 
-I’m Cedric Martin, a Business Analytics student interested in the intersection of analytics, finance, software, and business systems.
+I’m Cedric Martin, a Business Analytics student at BYU–Idaho interested in the intersection of analytics, finance, software, and business systems.
 :::
 
 ::: {.narrow-section}
@@ -19,7 +19,7 @@ I’m Cedric Martin, a Business Analytics student interested in the intersection
 
 I’m drawn to work that begins with a practical business question and ends with something people can actually use: a clean dataset, a repeatable workflow, a clear report, or a better way to make a decision.
 
-My approach combines business context with hands-on technical work. I enjoy understanding how information moves through an organization, finding where inconsistency or manual effort gets in the way, and building structured solutions with tools such as Python, SQL, and Power BI.
+My approach combines business context with hands-on technical work. I enjoy understanding how information moves through an organization, finding where inconsistent data or manual effort gets in the way, and building structured solutions with tools such as Python, SQL, and Power BI.
 
 Finance and FP&A are especially interesting to me because they connect detailed analysis to planning and performance. More broadly, I’m motivated by roles where analytical thinking can improve how a business operates.
 
